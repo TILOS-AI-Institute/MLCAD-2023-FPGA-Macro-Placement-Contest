@@ -29,7 +29,7 @@
 =======================================================================================
 
 This document explains the features of the FPGA macro placement file format.  With the exception of 
-the Vivado binary design checkpoint input file "design.dcp", it is based on an extenstion to the 
+the Vivado binary design checkpoint input file "design.dcp", it is based on an extension to the 
 Bookshelf format.  
 
 
@@ -51,11 +51,11 @@ Bookshelf format.
     http://www.ispd.cc/contests/16/ispd2016_contest.html
 
 4. design.scl (Device Layout) 
-  - This file specifies the devie layout placement for all instance types.
-  - There are two section in layout file: site definition section and site map section.
-  - SITE definition speicifies available resources (LUT/FF/RAMB/DSP) that can be placed in one site.
+  - This file specifies the device layout placement for all instance types.
+  - There are two section in layout file: SITE definition section and SITE map section.
+  - SITE definition specifies available resources (LUT/FF/RAMB/DSP) that can be placed in one site.
   - RESOURCES specifies cell names that correspond to certain resource.
-  - SITEMAP specifies the two-dimension array of sites for the entire device/chip.
+  - SITE map specifies the two-dimension array of sites for the entire device/chip.
   - NOTE 1:  The format of this file is similar to that released in the ACM ISPD 2016 placement contest,
     http://www.ispd.cc/contests/16/ispd2016_contest.html
   - NOTE 2:  Different from the 2016 ISPD Placement, we use an UltraScalePlus device, xcvu3p, in this competition.
@@ -64,7 +64,7 @@ Bookshelf format.
 5. design.pl (Locations of fixed instances and placeable macro instances) 
   - This file lists the location of placeable macro instances in the netlist
   - The location of an instance has three fields: <Column_number> <Site_number>  <BEL_number> 
-    The BEL number is the index within the Site.  The BEL number for macro instances is always 0.
+    The BEL number is the index within the SITE.  The BEL number for macro instances is always 0.
   - This supplied file only contains locations of fixed instances (IBUF/OBUF/BUFGCE etc).
     Fixed instance locations, including BEL numbers, are not allowed to change during placement.
   - NOTE 1: Your task is to supply the locations of the macro instances. Valid locations for
@@ -84,10 +84,10 @@ Bookshelf format.
           DSP_config_DSP_inst31_inst_bbb/my_dsp 186 47 0
           DSP_config_DSP_inst31_inst_bbbb/my_dsp 63 197 0
 
-   -NOTE 3: To place cascade shape instance, you only need to specify the location of its "reference component."
-            Please see the exaplantion and example  provided in section "7. design.cascade_shape_instances" below.
+   -NOTE 3: To place cascade shape instance, you only need to specify the location of its "reference component".
+            Please see the explantion and example provided in section "7, "design.cascade_shape_instances" below.
 
-   -NOTE 4: you can compute the number of macros in the netlist using the following bash script:
+   -NOTE 4: You can compute the number of macros in the netlist using the following bash script:
 
       #!/bin/bash
       #Begin
@@ -112,7 +112,7 @@ Bookshelf format.
 
 7. design.cascade_shape
      - Contains a list of cascaded macro shapes that are assembled by cascading basic macro types 
-       (ie. BRAM's, DSP's and URAM's).
+       (ie. BRAMs, DSPs and URAMs).
      - IMPORTANT NOTE:  Cascaded macro shapes can only be placed on columns of their respective types 
        as prescribed in the design.scl file.
      - For example:  The BRAM_CASCADE_5 macro is built by cascading single column of 5 RAMB36E2 BRAM 
@@ -183,14 +183,14 @@ Bookshelf format.
              BRAM_CASCADE_10_inst_b/RAMB36E2_inst 100 0 0
 
              This automatically places the components BRAM_CASCADE_10_inst_b/RAMB36E2_inst2 to BRAM_CASCADE_10_inst_b/RAMB36E2_inst10 in their respective
-             locations.  That is, locations (100 5 0) .. (100 45 0). 
+             locations, i.e. locations (100 5 0) ... (100 45 0). 
 
-      - NOTE 2: The following specifies a recipe for determing the reference components for BRAM, URAM, and DSP cascade instances:
+      - NOTE 2: The following specifies a recipe for determining the reference components for BRAM, URAM, and DSP cascade instances:
 
-        BRAM cascade reference component.  The reference component for a BRAM cascade ends with the suffix "_inst". For instance, in the the example, 
-        above the reference component is "BRAM_CASCADE_10_inst_b/RAMB36E2_inst"
+        BRAM cascade reference component: The reference component for a BRAM cascade ends with the suffix "_inst". For instance, in the example 
+        above, the reference component is "BRAM_CASCADE_10_inst_b/RAMB36E2_inst"
 
-        URAM cascade reference component.  The reference component for a URAM cascade ends with the suffix "_inst1". For instance,
+        URAM cascade reference component: The reference component for a URAM cascade ends with the suffix "_inst1". For instance,
         the reference component for the URAM cascade instance below is "URAM_CASCADE_8x2_inst_b/URAM288_inst1"
 
             URAM_cascade_8x2 8 2 URAM_CASCADE_8x2_inst_b
@@ -213,7 +213,7 @@ Bookshelf format.
                 URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst9
             END
 
-      DSP cascade reference component: Teh reference component for a DSP cascade conains the following two strings in the instance name: "_instance_name1" and "i_primitive"
+      DSP cascade reference component: The reference component for a DSP cascade conains the following two strings in the instance name: "_instance_name1" and "i_primitive"
       For instance, the reference instance for the DSP cascade below is "DSP_CASCADE_2_inst_b/your_instance_name1/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive"
 
            DSP_cascade_2 2 1 DSP_CASCADE_2_inst_b
