@@ -55,7 +55,7 @@ Bookshelf format.
   - There are two section in layout file: SITE definition section and SITE map section.
   - SITE definition specifies available resources (LUT/FF/RAMB/DSP) that can be placed in one site.
   - RESOURCES specifies cell names that correspond to certain resource.
-  - SITEMAP specifies the two-dimension array of sites for the entire device/chip.
+  - SITE map specifies the two-dimension array of sites for the entire device/chip.
   - NOTE 1:  The format of this file is similar to that released in the ACM ISPD 2016 placement contest,
     http://www.ispd.cc/contests/16/ispd2016_contest.html
   - NOTE 2:  Different from the 2016 ISPD Placement, we use an UltraScalePlus device, xcvu3p, in this competition.
