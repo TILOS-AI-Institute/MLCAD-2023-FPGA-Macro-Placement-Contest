@@ -51,7 +51,7 @@ Bookshelf format.
     http://www.ispd.cc/contests/16/ispd2016_contest.html
 
 4. design.scl (Device Layout) 
-  - This file specifies the devie layout placement for all instance types.
+  - This file specifies the device layout placement for all instance types.
   - There are two section in layout file: SITE definition section and SITE map section.
   - SITE definition specifies available resources (LUT/FF/RAMB/DSP) that can be placed in one site.
   - RESOURCES specifies cell names that correspond to certain resource.
