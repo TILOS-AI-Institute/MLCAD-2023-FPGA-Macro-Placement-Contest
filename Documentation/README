@@ -63,7 +63,7 @@ Bookshelf format.
           DSP_config_DSP_inst31_inst_bbbb/my_dsp 63 197 0
 
    -NOTE 3: To place cascade shape instance, you only need to specify the location of its "reference component".
-            Please see the explantion and example provided in section "7, "design.cascade_shape_instances" below.
+            Please see the explanation and example provided in section "7, "design.cascade_shape_instances" below.
 
    -NOTE 4: You can compute the number of macros in the netlist using the following bash script:
 
