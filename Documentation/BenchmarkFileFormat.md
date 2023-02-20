@@ -260,4 +260,4 @@ Bookshelf format.
            InstanceToRegionConstraintMapping END
 
 **10. design.dcp**
-        This file contains the synthesized netlist checkpoint that is required as an input by the Vivado executable.
+        This file contains the synthesized netlist checkpoint that is required as an input by the Vivado(c) place-and-route executable.
