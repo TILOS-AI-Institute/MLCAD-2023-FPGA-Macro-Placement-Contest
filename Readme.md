@@ -21,9 +21,9 @@ ____________________________________________________
 
 **BENCHMARK SUITE DESCRIPTION:**
 The organizers will provide a benchmark suite using enhanced bookshelf format.  Please refer to  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/tree/main/README for a full description of the file format.  Each design in the benchmark suite contains the following files:   
-|----|---------------|-------------------------------------------------------------------------------------------------|
+
 |#| File name | Description|
-|----|---------------|-------------------------------------------------------------------------------------------------|
+|---|---|---|
 |1. |**design.nodes**| Specifies placeable instances in the netlist (in Bookshelf format)|
 |2. |**design.nets:**| Specifies the set of nets in the netlist (in Bookshelf format)|
 |3.	|**design.lib:**| Specifies the cell library for placeable objects|
@@ -35,7 +35,7 @@ The organizers will provide a benchmark suite using enhanced bookshelf format.  
 |9.	|**design.regions:**  Specifies the box region constraints imposed on placeable objects.|
 |10. |**design.dcp:**|  This file contains the synthesized netlist checkpoint that is required as an input by the Vivado© executable.|
 |11. |**place_route.tcl:**|   A TCL script to place and route a netlist using the Vivado© flow leveraging the input macro placement solution.|
-|----|---------------|-------------------------------------------------------------------------------------------------|
+
 
 
 **FPGA Device:** The FPGA architecture used in the contest will be based on an UltrascalePlus xcvu3p monolithic device //Does it makes sense to add a link here to the architectural description of the device? The organizers reserve the right to modify the contents of the benchmark designs and format.
