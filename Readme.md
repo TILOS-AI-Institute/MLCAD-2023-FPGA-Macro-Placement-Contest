@@ -15,11 +15,11 @@ ____________________________________________________
 
 **E-mail:**  mlcad2023contest@gmail.com
 
-**Dataset:** https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download
+**Benchmark Suite Dataset:** https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download
 
    Macro placement plays an integral role in routability and timing closure for both the ASIC and FPGA physical design flows.  In particular, the discrete and columnated nature of the FPGA device layout presents unique placement constraints on placeable macros (e.g. BRAM’s, DSP’s, URAM’s, cascaded shapes, etc.).  These constraints are challenging for classical optimization and combinatorial approaches, and often the floorplans result in designs with routing and timing closure issues.  Inspired by recent deep reinforcement learning (RL) approaches (e.g. https://arxiv.org/abs/2004.10746), the goal of the competition is to spur academic research for developing ML or deep RL approaches to improve upon the current state-of-the-art macro placement tools.
 
-**BENCHMARK DESCRIPTION:**
+**BENCHMARK SUITE DESCRIPTION:**
 The organizers will provide a benchmark suite using enhanced bookshelf format.  Please refer to  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/tree/main/README for a full description of the file format.  Each design in the benchmark suite contains the following files:   
 
 1.	**design.nodes:** Specifies placeable instances in the netlist (in Bookshelf format)
