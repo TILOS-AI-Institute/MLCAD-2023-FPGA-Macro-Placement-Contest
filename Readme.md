@@ -50,7 +50,7 @@ The macro placement solution produced by participating placers will be evaluated
 **RELEVANT CONTEST DATES:**
 Please make note of the following dates:
 
-- $${\color{red}03/10/2023}$$: The test benchmark suite will be provided 
+- ${\color{red}03/10/2023}$: The test benchmark suite will be provided 
 - 04/10/2023: To officially participate, contestants must register  
 - 07/10/2023: Each team must submit an alpha binary submission for test purposes, else will be disqualified from the contest.
 - 08/15/2023: Teams are required to submit their final executable binaries by 11:59pm (pacific time)
