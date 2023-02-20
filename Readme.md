@@ -30,8 +30,8 @@ We are providing a benchmark suite dataset basedon an extended bookshelf format.
 |4.	|**design.pl**| Specifies the site locations of the macros including cascaded macro shape instances, I/O, and fixed objects.   This supplied file only contains locations of fixed instances (IBUF/OBUF/BUFGCE etc). Your task is to supply the locations of the placeable macro instances. Valid locations for macro (and cascaded shape) instances are prescribed in the design.scl file.|
 |5.	|**sample.pl**|  Specifies a macro placement sample reference solution.|
 |6.	|**design.scl**|  Extended from the original bookshelf format to represent xcvu3p device layout and permissible site locations for all placeable object types (please refer to Figure 1).|
-|7.	|**design.cascade_shape**| Specifies the types of placeable cascaded macro shapes (optional).|
-|8.	|**design.cascade_shape_instances**| Specifies the netlist instances of cascaded macro shapes (optional).|
+|7.	|**design.cascade_shape**| Specifies the types of placeable cascaded macro shapes.|
+|8.	|**design.cascade_shape_instances**| Specifies the netlist instances of cascaded macro shapes (not provided if no cascade shapes are present in the netlist).|
 |9.	|**design.regions**|  Specifies the box region constraints imposed on placeable objects.|
 |10. |**design.dcp**|  This file contains the synthesized netlist checkpoint that is required as an input by the Vivado© executable.|
 |11. |**place_route.tcl**|   A TCL script to place and route a netlist using the Vivado© flow leveraging the input macro placement solution.|
