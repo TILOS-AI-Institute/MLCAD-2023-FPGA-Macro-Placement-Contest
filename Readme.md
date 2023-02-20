@@ -15,6 +15,8 @@ ____________________________________________________
 
 **E-mail:**  mlcad2023contest@gmail.com
 
+**Dataset:** https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/
+
    Macro placement plays an integral role in routability and timing closure for both the ASIC and FPGA physical design flows.  In particular, the discrete and columnated nature of the FPGA device layout presents unique placement constraints on placeable macros (e.g. BRAM’s, DSP’s, URAM’s, cascaded shapes, etc.).  These constraints are challenging for classical optimization and combinatorial approaches, and often the floorplans result in designs with routing and timing closure issues.  Inspired by recent deep reinforcement learning (RL) approaches (e.g. https://arxiv.org/abs/2004.10746), the goal of the competition is to spur academic research for developing ML or deep RL approaches to improve upon the current state-of-the-art macro placement tools.
 
 **BENCHMARK DESCRIPTION:**
@@ -89,7 +91,7 @@ The organizers wish to thank Bodhisatta Pramanik, Zhiang Wang, Drs. Yuji Kukimot
 
 **Evaluation & Ranking:**
 
--	There are 176 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings)
+-	There are 176 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/)
 - There are 60 hidden benchmark designs that will be shared after the conclusion of the contest.
 - For each design in the benchmark suite (public or hidden), the macro placers will be ranked based on the contest evaluation metric. The final rank for a placer will be the sum of the individual ranks on all the circuits. The macro placer with the smallest total rank wins the contest.
 - The macro placement runtime must 10 minutes or less
