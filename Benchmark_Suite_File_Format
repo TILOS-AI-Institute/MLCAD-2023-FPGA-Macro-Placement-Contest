@@ -21,9 +21,9 @@
 #########################################################k##############################
 =======================================================================================
 
-            File Format for the MLCAD 2023 FPGA Macro Placement Competition
+            **File Format for the MLCAD 2023 FPGA Macro Placement Competition**
 
-                               (AMD copyright 2023)
+                               **(AMD copyright 2023)**
 
 =======================================================================================
 
@@ -32,10 +32,10 @@ the Vivado binary design checkpoint input file "design.dcp", it is based on an e
 Bookshelf format.  
 
 
-1. design.nets:  
+**1. design.nets:**  
    - This file describes the netlist connectivity in Bookshelf format
 
-2. design.nodes:
+**2. design.nodes:**
    - This file describes the placeable object instances in the netlist in Bookshelf format.
 
 3. design.lib (Library cell):
