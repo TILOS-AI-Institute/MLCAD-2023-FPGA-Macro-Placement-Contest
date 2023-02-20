@@ -1,5 +1,5 @@
-**#######################################################k##############################**
-##
+
+#####
 ##### Permission is hereby granted, free of charge, to any person obtaining a copy
 ##### of this software and associated documentation files (the "Software"), to deal
 ##### in the Software without restriction, including without limitation the rights
@@ -18,8 +18,8 @@
 ##### OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 ##### THE SOFTWARE.
 #####
-**#######################################################################################**
-=======================================================================================
+
+---------------------------------------------------------------------------------------
 
             **File Format for the MLCAD 2023 FPGA Macro Placement Competition**
 
@@ -38,7 +38,7 @@ Bookshelf format.
 **2. design.nodes:**
    - This file describes the placeable object instances in the netlist in Bookshelf format.
 
-3. design.lib (Library cell):
+**3. design.lib (Library cell):**
   - Each placeable object instance has a corresponding master library cell.
   - All library cells are defined in design.lib. 
   - All pins are defined in library file (.lib) cell section.
@@ -49,7 +49,7 @@ Bookshelf format.
   - NOTE:  The format of this file is identical to that released in the ACM ISPD 2016 placement contest,
     http://www.ispd.cc/contests/16/ispd2016_contest.html
 
-4. design.scl (Device Layout) 
+**4. design.scl (Device Layout)** 
   - This file specifies the device layout placement for all instance types.
   - There are two section in layout file: SITE definition section and SITE map section.
   - SITE definition specifies available resources (LUT/FF/RAMB/DSP) that can be placed in one site.
@@ -60,7 +60,7 @@ Bookshelf format.
   - NOTE 2:  Different from the 2016 ISPD Placement, we use an UltraScalePlus device, xcvu3p, in this competition.
       
 
-5. design.pl (Locations of fixed instances and placeable macro instances) 
+**5. design.pl (Locations of fixed instances and placeable macro instances)** 
   - This file lists the location of placeable macro instances in the netlist
   - The location of an instance has three fields: <Column_number> <Site_number>  <BEL_number> 
     The BEL number is the index within the SITE.  The BEL number for macro instances is always 0.
@@ -106,10 +106,10 @@ Bookshelf format.
       echo "nNacros: $nMacros" 
       #end
 
-6. sample.pl
+**6. sample.pl**
    Sample macro placement specification file.
 
-7. design.cascade_shape
+**7. design.cascade_shape**
      - Contains a list of cascaded macro shapes that are assembled by cascading basic macro types 
        (ie. BRAMs, DSPs and URAMs).
      - IMPORTANT NOTE:  Cascaded macro shapes can only be placed on columns of their respective types 
@@ -154,7 +154,7 @@ Bookshelf format.
              Shape DSP_CASCADE_60 60 1
              Shape URAM_CASCADE_8x2 8 2
   
-8. design.cascade_shape_instances 
+**8. design.cascade_shape_instances** 
       - This file lists the cascaded macro shape instances
       - For example,
 
@@ -222,7 +222,7 @@ Bookshelf format.
            END
 
             
-9. design.regions
+**9. design.regions**
       -  This file lists prescription for region constraints for placeable instances that have region constraints
       -  All region constraints boxes are exclusive, i.e., xLo <= x < xHi and yLo <= y < yHi
       -  Placeable instances not showing in the InstanceToRegionCosntraintMapping session are not subject to any region constraint
@@ -260,5 +260,5 @@ Bookshelf format.
              BRAM_config_BRAM_SDP_inst762_inst_bm/my_sdpram 0
            InstanceToRegionConstraintMapping END
 
-10. design.dcp
+**10. design.dcp**
         This file contains the synthesized netlist checkpoint that is required as an input by the Vivado executable.
