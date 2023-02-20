@@ -19,10 +19,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.**
 
 ---------------------------------------------------------------------------------------
-<p align="center">
+
 **File Format for the MLCAD 2023 FPGA Macro Placement Competition**
 **(AMD copyright 2023)**
-</p>
+
 ----------------------------------------------------------------------------------------
 
 This document explains the features of the FPGA macro placement file format.  With the exception of 
