@@ -1,6 +1,6 @@
 **MLCAD23-FPGA-Macro-Placement-Contest**
 
-##Evaluation & Ranking:
+**Evaluation & Ranking:**
 
 -	There are 176 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings)
 - There are 60 hidden benchmark designs that will be shared after the conclusion of the contest.
