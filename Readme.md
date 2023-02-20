@@ -32,7 +32,7 @@ The organizers will provide a benchmark suite using enhanced bookshelf format.  
 |6.	|**design.scl:**|  Extended from the original bookshelf format to represent xcvu3p device layout and permissible site locations for all placeable object types (please refer to Figure 1).|
 |7.	|**design.cascade_shape:**| Specifies the types of placeable cascaded macro shapes.|
 |8.	|**design.cascade_shape_instances:**| Specifies the netlist instances of cascaded macro shapes.|
-|9.	|**design.regions:**  Specifies the box region constraints imposed on placeable objects.|
+|9.	|**design.regions:**|  Specifies the box region constraints imposed on placeable objects.|
 |10. |**design.dcp:**|  This file contains the synthesized netlist checkpoint that is required as an input by the Vivado© executable.|
 |11. |**place_route.tcl:**|   A TCL script to place and route a netlist using the Vivado© flow leveraging the input macro placement solution.|
 
