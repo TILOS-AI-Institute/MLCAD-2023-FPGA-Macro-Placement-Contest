@@ -47,10 +47,10 @@ The organizers reserve the right to modify the contents of the benchmark designs
 Please make note of the following dates:
 
 - ${\color{red}03/15/2023}$: The test benchmark suite will be provided 
-- ${\color{red}04/15/2023}$: To officially participate, contestants must register  
+- ${\color{red}04/15/2023}$: Registration deadline  
 - ${\color{red}07/15/2023}$: Each team must submit an alpha binary submission for test purposes, else will be disqualified from the contest.
 - ${\color{red}08/15/2023}$: Teams are required to submit their final executable binaries by ${\color{red}11:59 \space pm \space (pacific \space time)}$
-- ${\color{red}09/10/2023}$: The contest results will be announced during MLCAD 2023
+- ${\color{red}09/10/2023}$: The contest results will be announced during MLCAD 2023 on 09/13/2023
  
 **CONTEST REGISTRATION:**
 
