@@ -67,7 +67,7 @@ https://www.xilinx.com/support/university/donation-program.html).
 
 **PRIZES:**
 
-Monetary prizes will be awarded to the top three teams.  More details on this will be announced on the web site.
+Monetary prizes will be awarded to the top three teams.  More details on this will be announced on this website.
 
 **EVALUATION & RANKING:**
 
