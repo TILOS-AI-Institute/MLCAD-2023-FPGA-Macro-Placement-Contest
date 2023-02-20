@@ -58,11 +58,11 @@ Please make note of the following dates:
 - Please add "MLCAD2023" to the subject line of any email.
 - To register your team, please provide the following information:
 
-1.	Affiliation of the team/contestant(s)
-2.	Names of team members and advising professor
-3.	One correspondence e-mail address for the team
-4.	Name of the macro placer
-5.	To participate in the contest and obtain a 1-year Vivado license, advising professors must register their team through the export compliant university program:  
+  1.	Affiliation of the team/contestant(s)
+  2.	Names of team members and advising professor
+  3.	One correspondence e-mail address for the team
+  4.	Name of the macro placer
+  5.	To participate in the contest and obtain a 1-year Vivado license, advising professors must register their team through the export compliant university program:  
 https://www.xilinx.com/support/university/donation-program.html).
 
 **PRIZES:**
@@ -71,13 +71,15 @@ Monetary prizes will be awarded to the top three teams.  More details on this wi
 
 **EVALUATION & RANKING:**
 
-The macro placement solution produced by participating placers will be evaluated using the Vivado© physical design compiler.  Contestant teams will be provided with a Vivado© license and a place-and-route flow that reads an input macro placement in the extended bookshelf format, check macro placement legality, and perform standard cell placement and routing.  The place-and-route flow will be non-timing driven for this contest.  The macro placement solution will be evaluated based on the following criteria:
+- The macro placement solution produced by participating placers will be evaluated using the Vivado© physical design compiler.  Contestant teams will be provided with a Vivado© license and a place-and-route flow that reads an input macro placement in the extended bookshelf format, check macro placement legality, and perform standard cell placement and routing.  The place-and-route flow will be non-timing driven for this contest.  The macro placement solution will be evaluated based on the following criteria:
 
-1.	Legality of the macro placement
-2.	Global and detail routing metrics (within a time-out limit of 6 hours)
-3.	Total routed wirelength, routing congestion
-4.	Macro placement runtime
-5.	Total placement and routing runtime of Vivado© place and route phases.
+  1.	Legality of the macro placement
+  2.	Global and detail routing metrics (within a time-out limit of 6 hours)
+  3.	Total routed wirelength, routing congestion
+  4.	Macro placement runtime
+  5.	Total placement and routing runtime of Vivado© place and route phases.
+
+
 -	There are 176 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download/)
 - There are 60 hidden benchmark designs that will be shared after the conclusion of the contest.
 - For each design in the benchmark suite (public or hidden), the macro placers will be ranked based on the contest evaluation metric. The final rank for a placer will be the sum of the individual ranks on all the circuits. The macro placer with the smallest total rank wins the contest.
