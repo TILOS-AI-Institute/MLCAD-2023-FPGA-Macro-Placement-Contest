@@ -50,17 +50,17 @@ The macro placement solution produced by participating placers will be evaluated
 **RELEVANT CONTEST DATES:**
 Please make note of the following dates:
 
-•	The test benchmark suite will be provided by March 1st, 2023
-•	To officially participate, contestants must register by April 1st, 2023 
-•	Each team must submit an alpha binary submission by July 1st, 2023 for test purposes, else will be disqualified from the contest.
-•	Teams are required to submit their final executable binaries by midnight September 15th, 2023.
-•	The contest results will be announced during MLCAD 2023
+- The test benchmark suite will be provided by March 1st, 2023
+- To officially participate, contestants must register by April 1st, 2023 
+- Each team must submit an alpha binary submission by July 1st, 2023 for test purposes, else will be disqualified from the contest.
+- Teams are required to submit their final executable binaries by midnight September 15th, 2023.
+- The contest results will be announced during MLCAD 2023
 
 **CONTEST REGISTRATION:**
 
-•	For registration and contest related inquiries, please email: mlcad2023contest@gmail.com
-•	Please add "MLCAD2023" to the subject line of any email.
-•	To register your team, please provide the following information:
+- For registration and contest related inquiries, please email: mlcad2023contest@gmail.com
+- Please add "MLCAD2023" to the subject line of any email.
+- To register your team, please provide the following information:
 
 1.	Affiliation of the team/contestant(s)
 2.	Names of team members and advising professor
