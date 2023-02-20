@@ -261,3 +261,20 @@ Bookshelf format.
 
 **10. design.dcp**
         This file contains the synthesized netlist checkpoint that is required as an input by the Vivado(c) place-and-route executable.
+        
+**11. place_route.tcl**
+        This file contains the following TCL commands to load a given macro placement solution and run the non-timing-driven place-and-route flow:
+        
+        #Load the synthesized netlist
+        open_checkpoint ./design.dcp
+
+        set_param place.timingDriven false
+
+        #Place design using the bookshelf macro placement
+        place_design  -macro_placement design.pl
+
+        #route design
+        route_design
+
+        #generate routing Report
+        report_route_status
