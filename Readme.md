@@ -99,7 +99,7 @@ o	We would like to stress that although runtime is a part of the contest metric,
 **CONTEST COMMITTEE:**
 
 Ismail Bustany (Chair)
-Meghraj Kalase__
+Meghraj Kalase
 Wuxi Li
 Grigor Gasparyan
 Amit Gupta
