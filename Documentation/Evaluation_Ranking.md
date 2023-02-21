@@ -14,7 +14,8 @@
 - For each design in the benchmark suite (public or hidden), the macro placers will be ranked based on the contest evaluation metric. The final rank for a placer will be the sum of the individual ranks on all the circuits. The macro placer with the smallest total rank wins the contest.
 - The macro placement runtime must be 10 minutes or less
 - The macro placement must be legal.  That is, macros must be placed on their respective legal sites.
-- The placement must be routed by the Vivado© router.  The router must complete the job within 5 hours. The routing is considered failed if the router takes more than 5 hours to finish.
+- The placement must be routable by the Vivado© router.  
+- Vivado must complete the flow within 5 hours per design category. The run is considered failed if the place-and-route flow takes more than 5 hours to finish.
 - Score = Routed-WL * (1 + Runtime_Factor)
 o	The Vivado© router reports total routed wirelength. This is the base of the score.
 o	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
