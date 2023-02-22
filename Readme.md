@@ -88,11 +88,11 @@ Monetary prizes will be awarded to the top three teams.  More details on this wi
 - The placement must be routable by the Vivado© router.  
 - Vivado must complete the flow within 5 hours per design category. The run is considered failed if the place-and-route flow takes more than 5 hours to finish.
 - Score = Routed-WL * (1 + Runtime_Factor)
-o	The Vivado© router reports total routed wirelength. This is the base of the score.
-o	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
-o	Runtime_Factor = - (Runtime - Median_Runtime) / 10.0 There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
-o	Runtime factor is between -10% and +10%
-o	We would like to stress that although runtime is a part of the contest metric, the "Total Routed Wirelength" will be the dominant component. In other words, a placer will not get a significant advantage if it is extremely fast compared to the median runtime of all the placers participating in the contest.
+  -	The Vivado© router reports total routed wirelength. This is the base of the score.
+  - 	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
+  - Runtime_Factor = - (Runtime - Median_Runtime) / 10.0 There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
+  - Runtime factor is between -10% and +10%
+  - We would like to stress that although runtime is a part of the contest metric, the "Total Routed Wirelength" will be the dominant component. In other words, a placer will not get a significant advantage if it is extremely fast compared to the median runtime of all the placers participating in the contest.
 - The run corresponding to a failed place/route task will be assigned the lowest rank on this design. 
 - In the presence of multiple failures, the break-tie factors are the following: Placer failure or router failure, router runtime, number of unrouted nets, number of illegal placements
 
