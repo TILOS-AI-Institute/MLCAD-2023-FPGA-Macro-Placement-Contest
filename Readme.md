@@ -90,7 +90,7 @@ Monetary prizes will be awarded to the top three teams.  More details on this wi
 - Score = Routed-WL * (1 + Runtime_Factor)
   -	The Vivado© router reports total routed wirelength. This is the base of the score.
   - 	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
-  - Runtime_Factor = - (Runtime - Median_Runtime) / 10.0 There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
+  - Runtime_Factor = - (Runtime - Median_Runtime) / 10.0. There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
   - Runtime factor is between -10% and +10%
   - We would like to stress that although runtime is a part of the contest metric, the "Total Routed Wirelength" will be the dominant component. In other words, a placer will not get a significant advantage if it is extremely fast compared to the median runtime of all the placers participating in the contest.
 - The run corresponding to a failed place/route task will be assigned the lowest rank on this design. 
