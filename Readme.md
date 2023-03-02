@@ -20,7 +20,7 @@ ____________________________________________________
    Macro placement plays an integral role in routability and timing closure for both the ASIC and FPGA physical design flows.  In particular, the discrete and columnated nature of the FPGA device layout presents unique placement constraints on placeable macros (e.g. BRAM’s, DSP’s, URAM’s, cascaded shapes, etc.).  These constraints are challenging for classical optimization and combinatorial approaches, and often the floorplans result in designs with routing and timing closure issues.  Inspired by recent deep reinforcement learning (RL) approaches (e.g. https://arxiv.org/abs/2004.10746), the goal of the competition is to spur academic research for developing ML or deep RL approaches to improve upon the current state-of-the-art macro placement tools.
 
 **BENCHMARK SUITE DESCRIPTION:**
-We are providing a benchmark suite dataset based on an extended bookshelf format.  Please refer to  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/blob/main/Documentation/BenchmarkFileFormat.md for a full description of the file format.  Each design in the benchmark suite contains the following files:   
+We are providing a benchmark suite dataset based on an extended Bookshelf format.  Please refer to  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/blob/main/Documentation/BenchmarkFileFormat.md for a full description of the file format.  Each design in the benchmark suite contains the following files:   
 
 |#| File name | Description|
 |---|---|---|
@@ -29,7 +29,7 @@ We are providing a benchmark suite dataset based on an extended bookshelf format
 |3.	|**design.lib**| Specifies the cell library for placeable objects|
 |4.	|**design.pl**| Specifies the site locations of the macros including cascaded macro shape instances, I/O, and fixed objects.   This file only contains locations of fixed instances (IBUF/OBUF/BUFGCE etc). Your task is to supply the locations of the placeable macro instances. Valid locations for macro (and cascaded shape) instances are prescribed in the design.scl file.|
 |5.	|**sample.pl**|  Specifies a macro placement sample reference solution.|
-|6.	|**design.scl**|  Extended from the original bookshelf format to represent xcvu3p device layout and permissible site locations for all placeable object types (please refer to Figure 1).|
+|6.	|**design.scl**|  Extended from the original Bookshelf format to represent xcvu3p device layout and permissible site locations for all placeable object types (please refer to Figure 1).|
 |7.	|**design.cascade_shape**| Specifies the types of placeable cascaded macro shapes.|
 |8.	|**design.cascade_shape_instances**| Specifies the netlist instances of cascaded macro shapes (not provided if no cascade shapes are present in the netlist).|
 |9.	|**design.regions**|  Specifies the box region constraints imposed on placeable objects.|
@@ -71,7 +71,7 @@ Monetary prizes will be awarded to the top three teams.  More details on this wi
 
 **EVALUATION & RANKING:**
 
-- The macro placement solution produced by participating placers will be evaluated using the Vivado© physical design compiler.  Contestant teams will be provided with a Vivado© license and a place-and-route flow that reads an input macro placement in the extended bookshelf format, check macro placement legality, and perform standard cell placement and routing.  The place-and-route flow will be non-timing driven for this contest.  The macro placement solution will be evaluated based on the following criteria:
+- The macro placement solution produced by participating placers will be evaluated using the Vivado© physical design compiler.  Contestant teams will be provided with a Vivado© license and a place-and-route flow that reads an input macro placement in the extended Bookshelf format, check macro placement legality, and perform standard cell placement and routing.  The place-and-route flow will be non-timing driven for this contest.  The macro placement solution will be evaluated based on the following criteria:
 
   1.	Legality of the macro placement
   2.	Global and detail routing metrics (within a time-out limit of 6 hours)
