@@ -271,7 +271,7 @@ Bookshelf format.
 
         set_param place.timingDriven false
 
-        #Place design using the bookshelf macro placement
+        #Place design using the Bookshelf macro placement
         place_design  -macro_placement design.pl
 
         #route design
