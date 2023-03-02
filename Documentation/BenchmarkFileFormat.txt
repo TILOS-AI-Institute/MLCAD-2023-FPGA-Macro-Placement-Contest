@@ -67,7 +67,7 @@ Bookshelf format.
   - This supplied file only contains locations of fixed instances (IBUF/OBUF/BUFGCE etc).
     Fixed instance locations, including BEL numbers, are not allowed to change during placement.
   - NOTE 1: Your task is to supply the locations of the macro instances. Valid locations for
-    macro (and cascaded shape) instances are prescribed in the design.scl file.  
+    macro (and cascade shape) instances are prescribed in the design.scl file.  
   - NOTE 2: You can add the macro placement instances locations using the following format:
 
         <intance_name> <Column_number> <Site_number> <BEL_number>
@@ -110,9 +110,9 @@ Bookshelf format.
    Sample macro placement specification file.
 
 7. design.cascade_shape
-     - Contains a list of cascaded macro shapes that are assembled by cascading basic macro types 
+     - Contains a list of cascade macro shapes that are assembled by cascading basic macro types 
        (ie. BRAMs, DSPs and URAMs).
-     - IMPORTANT NOTE:  Cascaded macro shapes can only be placed on columns of their respective types 
+     - IMPORTANT NOTE:  Cascade macro shapes can only be placed on columns of their respective types 
        as prescribed in the design.scl file.
      - For example:  The BRAM_CASCADE_5 macro is built by cascading single column of 5 RAMB36E2 BRAM 
        types and can be placed on BRAM colunms sites only:
@@ -155,7 +155,7 @@ Bookshelf format.
              Shape URAM_CASCADE_8x2 8 2
   
 8. design.cascade_shape_instances 
-      - This file lists the cascaded macro shape instances
+      - This file lists the cascade macro shape instances
       - For example,
 
         BRAM_cascade_10 10 1 BRAM_CASCADE_10_inst_b
