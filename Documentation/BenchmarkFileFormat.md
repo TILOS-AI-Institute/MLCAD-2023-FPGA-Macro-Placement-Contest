@@ -155,7 +155,7 @@ Bookshelf format.
   
 **8. design.cascade_shape_instances** 
       - This file lists the cascaded macro shape instances
-      - It is only provided are there are cascade shapes in the netlist.
+      - It is only provided since there are cascade shapes in the netlist.
       - For example,
 
         BRAM_cascade_10 10 1 BRAM_CASCADE_10_inst_b
