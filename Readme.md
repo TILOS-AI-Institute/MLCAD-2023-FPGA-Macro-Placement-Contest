@@ -114,12 +114,11 @@ Ismail Bustany (Chair)
 Meghraj Kalase    
 Wuxi Li    
 Grigor Gasparyan 
-
 Bodhisatta Pramanik
 Amit Gupta  
 Andrew B. Kahng 	 
 
 **ACKNOWLEDGEMENTS:**
 
-The organizers wish to thank Bodhisatta Pramanik, Zhiang Wang, Drs. Yuji Kukimoto, Sreevidya Maguluri, Ravishankar Menon, Nima Karimpour-Darav, Mehrdad Eslami, Chaithanya Dudha, Lin Chai, Kai Zhu, and Vishal Suthar for their helpful remarks, advice, and assistance.
+The organizers wish to thank Bodhisatta Pramanik, Zhiang Wang, Drs. Yuji Kukimoto, Sreevidya Maguluri, Ravishankar Menon, Nima Karimpour-Darav, Mehrdad Eslami, Chaithanya Dudha, Lin Chai, Kai Zhu, Kristin Perry, Cathal McCabe, Mark O Brian, and Vishal Suthar for their helpful remarks, advice, and assistance.
 
