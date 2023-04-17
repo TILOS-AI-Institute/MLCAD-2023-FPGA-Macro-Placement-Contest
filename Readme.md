@@ -15,7 +15,7 @@ ____________________________________________________
 
 **E-mail:**  mlcad2023contest@gmail.com
 
-**Benchmark Suite Dataset:** https://www.kaggle.com/datasets/ismailbustany/mlcad-2023-fpga-macro-placement-contest-dataset
+**Public Benchmark Suite Dataset:** https://www.kaggle.com/datasets/ismailbustany/mlcad-2023-fpga-macro-placement-contest-dataset
 
    Macro placement plays an integral role in routability and timing closure for both the ASIC and FPGA physical design flows.  In particular, the discrete and columnated nature of the FPGA device layout presents unique placement constraints on placeable macros (e.g. BRAM’s, DSP’s, URAM’s, cascade shapes, etc.).  These constraints are challenging for classical optimization and combinatorial approaches, and often the floorplans result in designs with routing and timing closure issues.  Inspired by recent deep reinforcement learning (RL) approaches (e.g. https://arxiv.org/abs/2004.10746), the goal of the competition is to spur academic research for developing ML or deep RL approaches to improve upon the current state-of-the-art macro placement tools.
 
