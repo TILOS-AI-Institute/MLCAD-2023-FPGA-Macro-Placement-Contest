@@ -36,7 +36,7 @@ ____________________________________________________
 |10. |**design.dcp**|  This file contains the synthesized netlist checkpoint that is required as an input by the Vivado© executable.|
 |11. |**place_route.tcl**|   A TCL script to place and route a netlist using the Vivado© flow leveraging the input macro placement solution.|
 
-The organizers reserve the right to modify the contents of the benchmark designs and format.
+The organizers reserve the right to modify the contents of the benchmark designs and its format.
 
 **FPGA Device:** The FPGA architecture used in the contest will be based on an UltrascalePlus xcvu3p monolithic device (please refer to https://www.xilinx.com/content/dam/xilinx/support/documents/data_sheets/ds890-ultrascale-overview.pdf).   
 
