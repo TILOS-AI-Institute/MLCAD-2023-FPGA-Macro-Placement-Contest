@@ -20,7 +20,7 @@ ____________________________________________________
    Macro placement plays an integral role in routability and timing closure for both the ASIC and FPGA physical design flows.  In particular, the discrete and columnated nature of the FPGA device layout presents unique placement constraints on placeable macros (e.g. BRAM’s, DSP’s, URAM’s, cascade shapes, etc.).  These constraints are challenging for classical optimization and combinatorial approaches, and often the floorplans result in designs with routing and timing closure issues.  Inspired by recent deep reinforcement learning (RL) approaches (e.g. https://arxiv.org/abs/2004.10746), the goal of the competition is to spur academic research for developing ML or deep RL approaches to improve upon the current state-of-the-art macro placement tools.
 
 **BENCHMARK SUITE DESCRIPTION:**
-We are providing a benchmark suite dataset based on an extended Bookshelf format.  Please refer to  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/blob/main/Documentation/BenchmarkFileFormat.md for a full description of the file format.  Each design in the benchmark suite contains the following files:   
+  The organizers will provide a public benchmark suite dataset (180 designs) using enhanced bookshelf format.  There will also be an unpublished blind benchmark suite dataset totally 60 designs.  Please refer to  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/blob/main/Documentation/BenchmarkFileFormat.md  for a full description of the file format.  Each design in the benchmark suite contains the following files
 
 |#| File name | Description|
 |---|---|---|
