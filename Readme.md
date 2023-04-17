@@ -15,7 +15,7 @@ ____________________________________________________
 
 **E-mail:**  mlcad2023contest@gmail.com
 
-**Benchmark Suite Dataset:** https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download
+**Benchmark Suite Dataset:** https://www.kaggle.com/datasets/ismailbustany/mlcad-2023-fpga-macro-placement-contest-dataset
 
    Macro placement plays an integral role in routability and timing closure for both the ASIC and FPGA physical design flows.  In particular, the discrete and columnated nature of the FPGA device layout presents unique placement constraints on placeable macros (e.g. BRAM’s, DSP’s, URAM’s, cascade shapes, etc.).  These constraints are challenging for classical optimization and combinatorial approaches, and often the floorplans result in designs with routing and timing closure issues.  Inspired by recent deep reinforcement learning (RL) approaches (e.g. https://arxiv.org/abs/2004.10746), the goal of the competition is to spur academic research for developing ML or deep RL approaches to improve upon the current state-of-the-art macro placement tools.
 
@@ -67,17 +67,28 @@ https://www.xilinx.com/support/university/donation-program.html).
 
 **PRIZES:**
 
-Monetary prizes will be awarded to the top three teams.  More details on this will be announced on this website.
+Prizes will be awarded to the top three teams.  More details on this will be announced on the web site.  Prizes will be awarded to the top 5 teams at the 2023 MLCAD  Workshop.
+
+Final Prizes
+1st Place: 	$2,500
+2nd Place: 	$1,500
+3rd Place: 	$1,000
+4th/5th  Places: 	$500
+
+Important note on prizes:
+1.  40% of each Final Prize is awarded for performance in the contest according to the defined evaluation metric. The remaining 60% is awarded if the team publishes their winning software as open source under a permissive open-source license (BSD, MIT, Apache), within 30 days of being announced as a winner.
+
+2.  Applicable taxes may be assessed on and deducted from award payments, subject to U.S. government policies
+
 
 **EVALUATION & RANKING:**
 
 - The macro placement solution produced by participating placers will be evaluated using the Vivado© physical design compiler.  Contestant teams will be provided with a Vivado© license and a place-and-route flow that reads an input macro placement in the extended Bookshelf format, check macro placement legality, and perform standard cell placement and routing.  The place-and-route flow will be non-timing driven for this contest.  The macro placement solution will be evaluated based on the following criteria:
 
   1.	Legality of the macro placement
-  2.	Global and detail routing metrics (within a time-out limit of 6 hours)
-  3.	Total routed wirelength, routing congestion
-  4.	Macro placement runtime
-  5.	Total placement and routing runtime of Vivado© place and route phases.
+  2.	Total routed wirelength, routing congestion (within a time-out limit of 6 hours)
+  3.	Macro placement runtime
+  4.	Total placement and routing runtime of Vivado© place and route phases.
 
 
 -	There are 196 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download/)
