@@ -7,9 +7,9 @@ FPGA MACROPLACEMENT CONTEST
 CALL FOR PARTICIPATION**
 ____________________________________________________
 
-**Registration start date:** 04/15/2023
+**Registration start date:** ${\color{red}04/15/2023}$
 
-**Registration deadline:** 05/15/2023
+**Registration deadline:**  ${\color{red}05/15/2023}$
 
 **GitHub site:**  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/
 
