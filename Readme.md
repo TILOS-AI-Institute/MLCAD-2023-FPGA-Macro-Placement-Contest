@@ -7,7 +7,7 @@ FPGA MACROPLACEMENT CONTEST
 CALL FOR PARTICIPATION**
 ____________________________________________________
 
-**Registration start date:** 03/15/2023
+**Registration start date:** 04/15/2023
 
 **Registration deadline:** 05/15/2023
 
@@ -102,7 +102,8 @@ Monetary prizes will be awarded to the top three teams.  More details on this wi
 Ismail Bustany (Chair)  
 Meghraj Kalase    
 Wuxi Li    
-Grigor Gasparyan    
+Grigor Gasparyan 
+Bodhisatta Pramanik
 Amit Gupta  
 Andrew B. Kahng 	 
 
