@@ -110,10 +110,14 @@ Important note on prizes:
 
 **CONTEST COMMITTEE:**
 
-Ismail Bustany (Chair)  
+Ismail Bustany (Chair) 
+
 Meghraj Kalase    
+
 Wuxi Li    
+
 Grigor Gasparyan 
+
 Bodhisatta Pramanik
 
 Amit Gupta 
