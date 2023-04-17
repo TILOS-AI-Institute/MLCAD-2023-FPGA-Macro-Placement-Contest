@@ -69,13 +69,12 @@ https://www.xilinx.com/support/university/donation-program.html).
 
 Prizes will be awarded to the top three teams.  More details on this will be announced on the web site.  Prizes will be awarded to the top 5 teams at the 2023 MLCAD  Workshop.
 
-**Final Prizes**
 - 1st Place: 	$2,500
 - 2nd Place: 	$1,500
 - 3rd Place: 	$1,000
 - 4th/5th  Places: 	$500
 
-Important notes on prizes:
+**Important notes on prizes:**
 1.  40% of each Final Prize is awarded for performance in the contest according to the defined evaluation metric. The remaining 60% is awarded if the team publishes their winning software as open source under a permissive open-source license (BSD, MIT, Apache), within 30 days of being announced as a winner.
 
 2.  Applicable taxes may be assessed on and deducted from award payments, subject to U.S. government policies
