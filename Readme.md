@@ -120,5 +120,5 @@ Important note on prizes:
 
 **ACKNOWLEDGEMENTS:**
 
-The organizers wish to thank Bodhisatta Pramanik, Zhiang Wang, Drs. Yuji Kukimoto, Sreevidya Maguluri, Ravishankar Menon, Nima Karimpour-Darav, Mehrdad Eslami, Chaithanya Dudha, Lin Chai, Kai Zhu, Kristin Perry, Cathal McCabe, Mark O Brian, and Vishal Suthar for their helpful remarks, advice, and assistance.
+The organizers wish to thank Zhiang Wang, Drs. Yuji Kukimoto, Sreevidya Maguluri, Ravishankar Menon, Nima Karimpour-Darav, Mehrdad Eslami, Chaithanya Dudha, Lin Chai, Kai Zhu, Kristin Perry, Cathal McCabe, Mark O Brian, and Vishal Suthar for their helpful remarks, advice, and assistance.
 
