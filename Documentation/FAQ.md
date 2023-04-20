@@ -1,7 +1,7 @@
 **1. How do I submit my macro placement solution?**
 
 - Email your code to mlacd2023contest@gmail.com with the heading "MLCAD 2023 Solution Code"
-- If your solution is completely in C++, you must provide source-code and compilation instructions.
+- If your solution is completely in C++, you must provide source-cod, compilation, and execution instructions.
 - If your solution uses python, you must provide a Docker container with a script that sets up your 
 Python envirnoment, loads a benchmark design, and runs your macro-placer to generate a macroplacement, "solution.pl" 
 file for us to evaluate.
