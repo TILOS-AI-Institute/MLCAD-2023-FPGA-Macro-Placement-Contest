@@ -3,10 +3,9 @@
 - The macro placement solution produced by participating placers will be evaluated using the Vivado© physical design compiler.  Contestant teams will be provided with a Vivado© license and a place-and-route flow that reads an input macro placement in the extended bookshelf format, check macro placement legality, and perform standard cell placement and routing.  The place-and-route flow will be non-timing driven for this contest.  The macro placement solution will be evaluated based on the following criteria:
 
   1.	Legality of the macro placement
-  2.	Global and detail routing metrics (within a time-out limit of 6 hours)
-  3.	Total routed wirelength, routing congestion
-  4.	Macro placement runtime
-  5.	Total placement and routing runtime of Vivado© place and route phases.
+  2.	Total routed wirelength, routing congestion
+  3.	Macro placement runtime
+  4.	Total placement and routing runtime of Vivado© place and route flow (5 hour limit)
 
 
 -	There are 196 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download/)
