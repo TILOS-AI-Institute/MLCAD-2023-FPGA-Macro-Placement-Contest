@@ -13,4 +13,4 @@ file for us to evaluate.
 You can use any hardware acceleration platform for training.  However, for us to evaluate your solution, you must provide a version that works on a CPU platform.
 
 **4. What is the runtime requirement for generating the macro placement solution?**
-The macro placement solution should be generated (inferred) within 10 minutes, otherwise there is a penalty incurred in the ranking score.
+The macro placement solution generation should not take more than 10% of the overall place_and_route flow runtime.
