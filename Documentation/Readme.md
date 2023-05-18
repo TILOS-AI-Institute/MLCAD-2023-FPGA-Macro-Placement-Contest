@@ -10,7 +10,8 @@ Test your installation by running the Vivado place-and-route flow TCL file, plac
 Please read the documentation for the contest provided on the github site,  https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/tree/main/Documentation.
        Please feel free to send any questions here for us to help you along the way.  There is also a FAQ (https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/blob/main/Documentation/FAQ.md) that we will update as needed.
 
-**Contents:**
+**Contents in this folder:**
+
 **BenchmarkFileFormat.md**:   Explanation of design file format (md)
 
 **BenchmarkFileFormat.txt**:  Explanation of design file format (text)
