@@ -1,4 +1,4 @@
-  Thank you for your and team's participation in the 2023 MLCAD FPGA macro placement contest.  The first tasks you need to do are the following:
+  Thank you for your participation in the 2023 MLCAD FPGA macro placement contest.  The first tasks you need to do are the following:
 
   1.  Obtain a Vivado license: 
  Please ask your advising professor to submit a Vivado license request from the Xilinx University Program (XP), https://www.xilinx.com/support/university/donation-program.html as outlined in  https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/blob/main/Contest-Registration/Registration.
