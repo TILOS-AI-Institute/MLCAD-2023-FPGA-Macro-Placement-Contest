@@ -88,22 +88,16 @@ Bookshelf format.
 
    -NOTE 4: You can compute the number of macros in the netlist using the following bash script:
 
+             
       #!/bin/bash
-       
-      egrep "DSP|BRAM|URAM" design.nodes > tmp1
-      nBasicMacros=`wc -l < tmp1`
+
+      nBasicMacros=`egrep "DSP|BRAM|URAM" design.nodes | wc -l`
       echo "$nBasicMacros"
-
-      egrep "Begin"  design.cascade_shape_instances > tmp2
-      nShapes=`wc -l < tmp2`
-
       nShapes=`egrep "Begin"  design.cascade_shape_instances | wc -l`
       echo "nSahpes $nShapes"
-
       nMacros=`egrep "inst"  design.cascade_shape_instances | wc -l`
-
       nMacros=`expr $nBasicMacros - $nMacros + $nShapes`
-      echo "nNacros: $nMacros" 
+      echo "nNacros: $nMacros
       
 
 6. sample.pl
