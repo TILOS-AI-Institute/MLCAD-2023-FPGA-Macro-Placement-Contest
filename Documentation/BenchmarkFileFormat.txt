@@ -89,10 +89,10 @@ Bookshelf format.
    -NOTE 4: You can compute the number of macros in the netlist using the following bash script:
 
       #!/bin/bash
-      #Begin
+       
       egrep "DSP|BRAM|URAM" design.nodes > tmp1
       nBasicMacros=`wc -l < tmp1`
-      echo "hi $nBasicMacros"
+      echo "$nBasicMacros"
 
       egrep "Begin"  design.cascade_shape_instances > tmp2
       nShapes=`wc -l < tmp2`
@@ -104,7 +104,7 @@ Bookshelf format.
 
       nMacros=`expr $nBasicMacros - $nMacros + $nShapes`
       echo "nNacros: $nMacros" 
-      #end
+      
 
 6. sample.pl
    Sample macro placement specification file.
