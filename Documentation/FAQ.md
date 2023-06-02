@@ -39,37 +39,42 @@ Sample router solution output:
   
 Phase 3 Initial Routing
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 1052dc016
-Time (s): cpu = 00:03:04 ; elapsed = 00:02:02 . Memory (MB): peak = 9588.973 ; gain = 334.016 ; free physical = 18393 ; free virtual = 180598
 Phase 3 Initial Routing | Checksum: 20647d656
-Time (s): cpu = 00:05:27 ; elapsed = 00:02:35 . Memory (MB): peak = 9588.973 ; gain = 334.016 ; free physical = 18103 ; free virtual = 180308
+ 
 INFO: [Route 35-449] Initial Estimated Congestion
  ________________________________________________________________________
 |           | Global Congestion | Long Congestion   | Short Congestion  |
-|           |___________________|___________________|___________________|
+|           |---|---|---|
+
 | Direction | Size   | % Tiles  | Size   | % Tiles  | Size   | % Tiles  |
-|___________|________|__________|________|__________|________|__________|
+|---|---|---|---|---|---|---|
 |      NORTH|     2x2|      0.01|     8x8|      0.98|     1x1|      0.03|
-|___________|________|__________|________|__________|________|__________|
 |      SOUTH|     2x2|      0.01|     4x4|      1.27|     2x2|      0.02|
-|___________|________|__________|________|__________|________|__________|
 |       EAST|     4x4|      0.23|   16x16|      2.46|     2x2|      0.29|
-|___________|________|__________|________|__________|________|__________|
 |       WEST|     2x2|      0.43|   16x16|      3.49|     2x2|      0.58|
-|___________|________|__________|________|__________|________|__________|
+ 
 Congestion Report
   LONG Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
 EAST
         INT_X63Y179->INT_X78Y202 (CLEM_X63Y179->URAM_URAM_FT_X78Y195)
+        
         INT_X64Y185->INT_X79Y200 (CLEM_X64Y185->CLEL_R_X79Y200)
+        
         INT_X64Y184->INT_X79Y199 (CLEM_X64Y184->CLEL_R_X79Y199)
+        
         INT_X64Y183->INT_X79Y198 (CLEM_X64Y183->CLEL_R_X79Y198)
+        
         INT_X64Y181->INT_X79Y196 (CLEM_X64Y181->CLEL_R_X79Y196)
+        
 WEST
         INT_X69Y177->INT_X76Y200 (CLEM_X69Y177->CLEL_R_X76Y200)
+        
         INT_X40Y228->INT_X47Y235 (CLEM_X40Y228->CLEL_R_X47Y235)
+        
         INT_X40Y227->INT_X47Y234 (CLEM_X40Y227->CLEL_R_X47Y234)
+        
         INT_X40Y226->INT_X47Y233 (CLEM_X40Y226->CLEL_R_X47Y233)
+        
         INT_X32Y241->INT_X39Y248 (BRAM_X32Y240->DSP_X39Y245)
 
 Phase 4 Rip-up And Reroute
@@ -90,13 +95,10 @@ Time (s): cpu = 00:19:54 ; elapsed = 00:06:49 . Memory (MB): peak = 9588.973 ; g
 Phase 5 Delay and Skew Optimization
 Phase 5 Delay and Skew Optimization | Checksum: 1429a133d
 
-Time (s): cpu = 00:19:56 ; elapsed = 00:06:51 . Memory (MB): peak = 9588.973 ; gain = 334.016 ; free physical = 18107 ; free virtual = 180312
-
 Phase 6 Post Hold Fix
 Phase 6.1 Hold Fix Iter
 Phase 6.1 Hold Fix Iter | Checksum: 1429a133d
 
-Time (s): cpu = 00:19:58 ; elapsed = 00:06:53 . Memory (MB): peak = 9588.973 ; gain = 334.016 ; free physical = 18108 ; free virtual = 180313
 Phase 6 Post Hold Fix | Checksum: 1429a133d
 
 Time (s): cpu = 00:20:00 ; elapsed = 00:06:54 . Memory (MB): peak = 9588.973 ; gain = 334.016 ; free physical = 18109 ; free virtual = 180313
