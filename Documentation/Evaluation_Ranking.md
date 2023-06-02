@@ -14,9 +14,14 @@
 - The macro placement runtime must be 10 minutes or less
 - The macro placement must be legal.  That is, macros must be placed on their respective legal sites.
 - The placement must be routable by the Vivado© router.  
-- Vivado must complete the flow within 5 hours per design category. The run is considered failed if the place-and-route flow takes more than 5 hours to finish.
-- Score = Routed-WL * (1 + Runtime_Factor)
-o	The Vivado© router reports total routed wirelength. This is the base of the score.
+- Vivado must complete the flow within 5 hours per design category. The run is considered failed if the place-and-route flow takes more than 5 hours to finish. 
+o	The Vivado© router reports routing congestion metrics. This is the base of the score.
+o The routing congestion metrics are composed of two parts:  An initial router metric and a detailed (final) router metric.
+o The initial rouer metric is presented as a table that captures short and global congestion in the north, south, east, and west directions:
+For example:
+
+
+
 o	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
 o	Runtime_Factor = (Runtime - Median_Runtime) / 10.0 There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
 o	The macro placement solution runtime should not take more than 10% of the overall place_and_route flow runtime.
