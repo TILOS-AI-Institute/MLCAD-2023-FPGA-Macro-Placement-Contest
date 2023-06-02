@@ -16,8 +16,8 @@
 - The placement must be routable by the Vivado© router.  
 - Vivado must complete the flow within 5 hours per design category. The run is considered failed if the place-and-route flow takes more than 5 hours to finish. 
 -	The Vivado© router reports routing congestion metrics. This is the base of the score.
-- The routing congestion metrics are composed of two parts:  An initial router metric and a detailed (final) router metric.
-- **Initial Router Congestion Metric**: The initial router metric is presented as a table that captures short and global congestion in the north, south, east, and west directions (please see example table below):
+- The routing congestion metrics are composed of two parts:  An initial router metric and a detailed router metric.
+- **Initial Routing Congestion Metric**: The initial router metric is presented as a table that captures short and global congestion in the north, south, east, and west directions (please see example table below):
 ```
 INFO: [Route 35-449] Initial Estimated Congestion
 
@@ -30,11 +30,12 @@ INFO: [Route 35-449] Initial Estimated Congestion
 |       WEST|     2x2|      0.43|   16x16|      3.49|     2x2|      0.58|
 
 ```
-  - A level 2 initial router congestion is indicated by 2x2 in the above table. It means that a 2x2 grid of pixels in the interconnect fabric is congested and so on and so forth for levels 3, 4, ..., 8.
-  - **Initial_routing_congestion_score** = 1.2 x sum(short_congestion_level_i^2 + sum(global_congestion_level_i^2), where i=north, south, east, and south.
+  - A level 4 initial router congestion is indicated by 4x4 in the above table. It means that a 4x4 grid of pixels in the interconnect fabric is congested and so on and so forth for levels 1, 2, ..., 8.
+  - A congestion level of 3 and below for a given direction is considered routable and will not be penalized.
+  - **Initial_routing_congestion_score** = 1.2 x sum(max(0, short_congestion_level_i-3)^2) + sum(max(0, global_congestion_level_i-3)^2), where i=north, south, east, and south.
 
  
- - **Final Router Congestion Metric:** The final router lists the intermediate number of congested wires (nodes with overlaps) during its iterations to resolve congestion (please see example below):
+ - **Detailed Routing Congestion Metric:** The final router lists the intermediate number of congested wires (nodes with overlaps) during its iterations to resolve congestion (please see example below):
  
 ```
 Phase 4 Rip-up And Reroute
@@ -46,13 +47,13 @@ Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
  ```
-- **Final_routing_cong Score = number of iterations in Phase 4.1.
-- **Routing_congestion_score = Initial_routing_congestion_score x Final_routing_congestion_score **
+- **Detailed_routing_congestion_score = number of iterations in Phase 4.1.**
+- **Routing_congestion_score = Initial_routing_congestion_score x Detailed_routing_congestion_score**
 
 -	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
 -	Runtime_factor = (Total_runtime - Median_runtime) / 10.0 There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
 -	**Final_Score = Routing_congestion_score x (1 + Runtime_factor)**
--	The macro placement solution runtime should not take more than 10% of the overall place_and_route flow runtime.
+-	The macro placement solution generation runtime should not take more than 10% of the overall place_and_route flow runtime.
 -	We would like to stress that although runtime is a part of the contest metric, the "routing congestion metrics" will be the dominant component. In other words, a placer will not get a significant advantage if it is extremely fast compared to the median runtime of all the placers participating in the contest.
 - The run corresponding to a failed place/route task will be assigned the lowest rank on this design. 
 - In the presence of multiple failures, the break-tie factors are the following: Placer failure or router failure, router runtime, number of unrouted nets, number of illegal placements
