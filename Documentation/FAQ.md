@@ -119,15 +119,20 @@ Router Utilization Summary
 **6. Please use the following place_route.tcl file for your runs: "**
  
 #Load the synthesized netlist
+
 open_checkpoint ./design.dcp
+
 set_param place.timingDriven false
 
 #Place design using the bookshelf macro placement
+
 place_design  -macro_placement sample.pl -verbose
 
 #route design
+
 route_design -no_timing_driven -verbose
 
 #generate routing Report
+
 report_route_status
 
