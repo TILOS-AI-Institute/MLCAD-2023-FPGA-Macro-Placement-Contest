@@ -42,12 +42,10 @@ Phase 3.1 Global Routing
 Phase 3 Initial Routing | Checksum: 20647d656
  
 INFO: [Route 35-449] Initial Estimated Congestion
- ________________________________________________________________________
+```
 |           | Global Congestion | Long Congestion   | Short Congestion  |
-|           |---|---|---|
-
 | Direction | Size   | % Tiles  | Size   | % Tiles  | Size   | % Tiles  |
-|---|---|---|---|---|---|---|
+|-----------|--------|----------|--------|----------|--------|----------|
 |      NORTH|     2x2|      0.01|     8x8|      0.98|     1x1|      0.03|
 |      SOUTH|     2x2|      0.01|     4x4|      1.27|     2x2|      0.02|
 |       EAST|     4x4|      0.23|   16x16|      2.46|     2x2|      0.29|
@@ -57,24 +55,16 @@ Congestion Report
   LONG Congestion bounded by tiles (Lower Left Tile -> Upper Right Tile):
 EAST
         INT_X63Y179->INT_X78Y202 (CLEM_X63Y179->URAM_URAM_FT_X78Y195)
-        
         INT_X64Y185->INT_X79Y200 (CLEM_X64Y185->CLEL_R_X79Y200)
-        
         INT_X64Y184->INT_X79Y199 (CLEM_X64Y184->CLEL_R_X79Y199)
-        
         INT_X64Y183->INT_X79Y198 (CLEM_X64Y183->CLEL_R_X79Y198)
-        
         INT_X64Y181->INT_X79Y196 (CLEM_X64Y181->CLEL_R_X79Y196)
         
 WEST
         INT_X69Y177->INT_X76Y200 (CLEM_X69Y177->CLEL_R_X76Y200)
-        
         INT_X40Y228->INT_X47Y235 (CLEM_X40Y228->CLEL_R_X47Y235)
-        
         INT_X40Y227->INT_X47Y234 (CLEM_X40Y227->CLEL_R_X47Y234)
-        
         INT_X40Y226->INT_X47Y233 (CLEM_X40Y226->CLEL_R_X47Y233)
-        
         INT_X32Y241->INT_X39Y248 (BRAM_X32Y240->DSP_X39Y245)
 
 Phase 4 Rip-up And Reroute
@@ -115,24 +105,42 @@ Router Utilization Summary
   Number of Unrouted Nets             = 0
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
+```
+**6. Please replace place_route.tcl with the the following version to get verobse output from Vivado:**
+```
+############################## AMD Copyright (c) 2023 ##############################
 
-**6. Please use the following place_route.tcl file for your runs: "**
- 
+#    Permission is hereby granted, free of charge, to any person obtaining a copy
+#  of this software and associated documentation files (the "Software"), to deal
+#  in the Software without restriction, including without limitation the rights
+#  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#  copies of the Software, and to permit persons to whom the Software is
+#  furnished to do so, subject to the following conditions:
+#
+#    The above copyright notice and this permission notice shall be included in
+#  all copies or substantial portions of the Software.
+#
+#    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+#  THE SOFTWARE.
+#
+####################################################################################
+
 #Load the synthesized netlist
-
 open_checkpoint ./design.dcp
 
 set_param place.timingDriven false
 
 #Place design using the bookshelf macro placement
-
 place_design  -macro_placement sample.pl -verbose
 
 #route design
-
 route_design -no_timing_driven -verbose
 
 #generate routing Report
-
 report_route_status
-
+```
