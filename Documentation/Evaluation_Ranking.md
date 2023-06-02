@@ -8,8 +8,8 @@
   4.	Total placement and routing runtime of Vivado© place and route flow (5 hour limit)
 
 
--	There are 196 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download/)
-- There are 44 hidden benchmark designs that will be shared after the conclusion of the contest.
+-	There are 180 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download/)
+- There are 60 hidden benchmark designs that will be shared after the conclusion of the contest.
 - For each design in the benchmark suite (public or hidden), the macro placers will be ranked based on the contest evaluation metric. The final rank for a placer will be the sum of the individual ranks on all the circuits. The macro placer with the smallest total rank wins the contest.
 - The macro placement runtime must be 10 minutes or less
 - The macro placement must be legal.  That is, macros must be placed on their respective legal sites.
