@@ -47,7 +47,7 @@ Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 4
  Number of Nodes with overlaps = 0
  ```
-- ***Detailed_routing_congestion_score = number of iterations in Phase 4.1.***
+- ***Detailed_routing_congestion_score = number of iterations in Phase 4***
 - ***Routing_congestion_score = Initial_routing_congestion_score x Detailed_routing_congestion_score***
 
 -	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
