@@ -30,7 +30,7 @@ INFO: [Route 35-449] Initial Estimated Congestion
 |       WEST|     2x2|      0.43|   16x16|      3.49|     2x2|      0.58|
 
 ```
-  - A 4x4 size congestion indicates congestion level 4 in the above table. It means that a 4x4 grid of pixels in the interconnect fabric is congested and so on and so forth for levels 1, 2, ..., 8.
+  - A 16 x 16  size congestion indicates congestion level 4 in the above table. It means that a 16 x 16 grid of pixels in the interconnect fabric is congested and so on and so forth for levels 1, 2, ..., 8.
   - A congestion level of 3 and below for a given direction is considered routable and will not be penalized.
   - ***Initial_routing_congestion_score = 1.2 x sum<sub>i</sub>(max(0, short_congestion_level<sub>i</sub>-3)<sup>2</sup>) + sum_i(max(0, global_congestion_level<sub>i</sub>-3)<sup>2</sup>), where i=north, south, east, and south.***
 
