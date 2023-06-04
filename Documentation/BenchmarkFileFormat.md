@@ -84,29 +84,10 @@ Bookshelf format.
 
    -NOTE 3: To place cascade shape instance, you only need to specify the location of its "reference component".
             Please see the explanation and example provided in section "7, "design.cascade_shape_instances" below.
-
-   -NOTE 4: You can compute the number of macros in the netlist using the following bash script:
-
-      #!/bin/bash
-      #Begin
-      egrep "DSP|BRAM|URAM" design.nodes > tmp1
-      nBasicMacros=`wc -l < tmp1`
-      echo "hi $nBasicMacros"
-
-      egrep "Begin"  design.cascade_shape_instances > tmp2
-      nShapes=`wc -l < tmp2`
-
-      nShapes=`egrep "Begin"  design.cascade_shape_instances | wc -l`
-      echo "nSahpes $nShapes"
-
-      nMacros=`egrep "inst"  design.cascade_shape_instances | wc -l`
-
-      nMacros=`expr $nBasicMacros - $nMacros + $nShapes`
-      echo "nNacros: $nMacros" 
-      #end
+ 
 
 **6. sample.pl**
-   Sample macro placement specification file.
+   Sample macro placement specification file for all the macro blocks in the design.
 
 **7. design.cascade_shape**
      - Contains a list of cascade macro shapes that are assembled by cascading basic macro types 
