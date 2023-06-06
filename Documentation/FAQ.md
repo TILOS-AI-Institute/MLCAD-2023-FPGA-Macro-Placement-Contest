@@ -106,6 +106,7 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 ```
+
 **6. Please replace place_route.tcl with the the following version to get verobse output from Vivado:**
 ```
 ############################## AMD Copyright (c) 2023 ##############################
@@ -143,4 +144,22 @@ route_design -no_timing_driven -verbose
 
 #generate routing Report
 report_route_status
+```
+
+
+8.   ***Question regarding cascaded URAM macros:***
+  ```
+Dear Sir or Madam,
+Hello.
+I have two questions about the cascade shape of URAM, which straddles two columns:
+
+1. The URAM columns on the provided device is discrete, for the cascaded placement of URAMs, does it mean we have to place them on adjacent columns?
+Answer:  Yes.
+
+2. The shape of URAM_CASCADE_8x2 is 8x2, does it mean that we have to place the first 8 URAMs on one column, and place the remaining 8 on another column?
+Answer: Yes.
+
+Thanks a lot!
+Best
+Pu Yuan
 ```
