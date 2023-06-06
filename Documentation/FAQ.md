@@ -147,7 +147,7 @@ report_route_status
 ```
 
 
-8.   ***Question regarding cascaded URAM macros:***
+7.   ***Question regarding cascaded URAM macros:***
   ```
 Dear Sir or Madam,
 Hello.
