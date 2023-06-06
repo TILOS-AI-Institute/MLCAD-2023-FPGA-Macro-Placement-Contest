@@ -51,7 +51,7 @@ Phase 4.1 Global Iteration 0
 - 
 - ***Routing_congestion_score = Initial_routing_congestion_score x Detailed_routing_congestion_score***
 
-- ***Macroplacement_generation_runtime_score:  max (macroplacment generation runtime - 600 sec, 0)/60***  
+- ***Macroplacement_generation_runtime_score:  max (macroplacment generation runtime in secs - 600 sec, 0)/60 secs***  
 
 -	Total P&R flow runtime factor is calculated as follows:
 
