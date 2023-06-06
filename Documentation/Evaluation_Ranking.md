@@ -3,7 +3,7 @@
 - The macro placement solution produced by participating placers will be evaluated using the Vivado© physical design compiler.  Contestant teams will be provided with a Vivado© license and a place-and-route flow that reads an input macro placement in the extended bookshelf format, check macro placement legality, and perform standard cell placement and routing.  The place-and-route flow will be non-timing driven for this contest.  The macro placement solution will be evaluated based on the following criteria:
 
   1.	Legality of the macro placement
-  2.	Total routed wirelength, routing congestion
+  2.	Total routing congestion
   3.	Macro placement runtime
   4.	Total placement and routing runtime of Vivado© place and route flow (5 hour limit)
 
@@ -48,11 +48,16 @@ Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 0
  ```
 - ***Detailed_routing_congestion_score = Number of iterations in Phase 4***
+- 
 - ***Routing_congestion_score = Initial_routing_congestion_score x Detailed_routing_congestion_score***
 
--	Total placement (macros and standard cells) and routing runtime will be used in computing P&R_Runtime_Factor;
+- ***Macroplacement_generation_runtime_score:  max (macroplacment generation runtime - 600 sec, 0)/60***  
+
+-	Total P&R flow runtime factor is calculated as follows:
+
 -	***Runtime_factor = (Total_runtime - Median_runtime) / 10.*** There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
--	***Final_Score = Routing_congestion_score x (1 + Runtime_factor)***
+-	***Final_Score = Routing_congestion_score x Macroplacement_generation_runtime_score x (1 + Runtime_factor)***
+
 -	The macro placement solution generation runtime should not take more than 10% of the overall place_and_route flow runtime.
 -	We would like to stress that although runtime is a part of the contest metric, the "routing congestion metrics" will be the dominant component. In other words, a placer will not get a significant advantage if it is extremely fast compared to the median runtime of all the placers participating in the contest.
 - The run corresponding to a failed place/route task will be assigned the lowest rank on this design. 
