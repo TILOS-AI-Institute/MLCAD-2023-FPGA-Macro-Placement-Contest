@@ -51,11 +51,12 @@ Phase 4.1 Global Iteration 0
 - 
 - ***Routing_congestion_score = Initial_routing_congestion_score x Detailed_routing_congestion_score***
 
-- ***Macroplacement_generation_runtime_score:  max (macroplacment generation runtime in secs - 600 sec, 0)/60 secs***  
+- ***Macroplacement_generation_runtime_score: 1 +  max (macroplacment generation runtime in secs - 600 sec, 0)/60 secs***  
 
 -	Total P&R flow runtime factor is calculated as follows:
 
 -	***Runtime_factor = (Total_runtime - Median_runtime) / 10.*** There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
+
 -	***Final_Score = Routing_congestion_score x Macroplacement_generation_runtime_score x (1 + Runtime_factor)***
 
 -	The macro placement solution generation runtime should not take more than 10% of the overall place_and_route flow runtime.
