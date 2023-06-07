@@ -48,7 +48,7 @@ Phase 4.1 Global Iteration 0
  Number of Nodes with overlaps = 0
  ```
 - ***Detailed_routing_congestion_score = Number of iterations in Phase 4***
-- 
+
 - ***Routing_congestion_score = Initial_routing_congestion_score x Detailed_routing_congestion_score***
 
 - ***Macroplacement_generation_runtime_score: 1 +  max (macroplacment generation runtime in secs - 600 sec, 0)/60 secs***  
