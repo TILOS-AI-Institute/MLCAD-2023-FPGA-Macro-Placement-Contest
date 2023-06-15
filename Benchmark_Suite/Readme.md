@@ -6,6 +6,8 @@
 **MLCAD-2023-Contest-Public-Benchmark-Suite-Place-and-Route-Runtime-Specifications.pdf**: Baseline place-and-route runtime stats for designs with default Vivado 2021.1 macro placement
  
 **MLCAD2023_PublicBenchmakrSuiteDesignSpecifications.xlsx:** Describes the design and netlist specifications
+
+**design.lib**:  Corrected version of design.lib.  Please use this for all of the designs in the benchmark suite.
  
  
  
