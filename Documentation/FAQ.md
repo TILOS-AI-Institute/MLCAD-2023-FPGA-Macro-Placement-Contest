@@ -165,7 +165,7 @@ Pu Yuan
 ```
 
 8.  **Fixed error in design.lib**  (posted on 06/15/2023)
-   The design.lib provided in the benchmark suite is missing a library definition.  Thanks for team SEU_Placer for finding that bug.
+   The design.lib provided in the benchmark suite is missing a library definition.  Thanks to Hao Gu from team SEU_Placer for finding that bug.
 Please use the version of design.lib posted on https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/tree/main/Benchmark_Suite instead of the version in the benchmark suite.
 
 9.  **Design_1 has a problem**   (posted on 06/15/2023)
