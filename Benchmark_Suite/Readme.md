@@ -7,7 +7,9 @@
  
 **MLCAD2023_PublicBenchmakrSuiteDesignSpecifications.xlsx:** Describes the design and netlist specifications
 
-**design.lib**:  Corrected version of design.lib.  Please use this for all of the designs in the benchmark suite.
+**design.lib**:  Corrected version of design.lib.  Please use this version for all of the designs in the benchmark suite.
+
+**design.scl**:  Corrected version of design.scl.  Please use this version for all of the designs in the benchmark suite.
  
  
  
