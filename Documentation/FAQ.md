@@ -1,12 +1,11 @@
 **1. How do I submit my macro placement solution?**
 
-- Email your code to mlacd2023contest@gmail.com with the heading "MLCAD 2023 Solution Code"
-- If your solution is completely in C++, you must provide source-code, compilation and execution instructions.
-- If your solution uses python, you must provide a Docker container with a script that sets up your 
-Python envirnoment, loads a benchmark design, and runs your macro placer to generate a macro placement solution file, "solution.pl" for us to evaluate.
+- Email your code to mlacd2023contest@gmail.com with the subject "MLCAD 2023 Solution Code".
+- If your solution is entirely in C++, you must provide source code, as well as compilation and execution instructions.
+- If your solution uses Python, you must provide a Docker container with a script that sets up your Python environment, loads a benchmark design, and runs your macro placer to generate a macro placement solution file, "solution.pl," for us to evaluate.
 
-**2. How does a sample macro placement solution file look like?**
-- A sample macro placement solution file, sample.pl, is provided with each test case.  It is based on the ".pl" Bookshelf format.  Please inspect it to learn about the format.
+**2. How does a sample macro placement solution file look like?**  
+A sample macro placement solution file, sample.pl, is provided with each test case.  It is based on the ".pl" Bookshelf format.  Please inspect it to learn about the format.
 
 **3. What hardware acceleration platform can I use?**
 You can use any hardware acceleration platform for training.  However, for us to evaluate your solution, you must provide a version that works on a CPU platform.
