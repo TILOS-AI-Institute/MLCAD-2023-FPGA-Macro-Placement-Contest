@@ -46,15 +46,15 @@ The organizers reserve the right to modify the contents of the benchmark designs
 **RELEVANT CONTEST DATES:**
 Please make note of the following dates:
 
-- ${\color{red}04/15/2023}$: The test benchmark suite will be provided 
-- ${\color{red}05/22/2023}$: Registration deadline  
+- ${\color{red}04/15/2023}$: The test benchmark suite will be provided. 
+- ${\color{red}05/22/2023}$: Registration deadline.  
 - ${\color{red}07/15/2023}$: Each team must submit an alpha binary submission for test purposes, else will be disqualified from the contest.
-- ${\color{red}08/15/2023}$: Teams are required to submit their final executable binaries by ${\color{red}11:59}$ pm  (pacific time)
-- ${\color{red}09/13/2023}$: The contest results will be announced during MLCAD 2023 on 09/13/2023
+- ${\color{red}08/15/2023}$: Teams are required to submit their final executable binaries by ${\color{red}11:59}$ pm  (pacific time).
+- ${\color{red}09/13/2023}$: The contest results will be announced during MLCAD 2023 on 09/13/2023.
  
 **CONTEST REGISTRATION:**
 
-- For registration and contest related inquiries, please email: mlcad2023contest@gmail.com
+- For registration and contest related inquiries, please email: mlcad2023contest@gmail.com.
 - Please add "MLCAD2023" to the subject line of any email.
 - To register your team, please provide the following information:
 
@@ -77,7 +77,7 @@ Prizes will be awarded to the top three teams.  More details on this will be ann
 **Important notes on prizes:**
 1.  40% of each Final Prize is awarded for performance in the contest according to the defined evaluation metric. The remaining 60% is awarded if the team publishes their winning software as open source under a permissive open-source license (BSD, MIT, Apache), within 30 days of being announced as a winner.
 
-2.  Applicable taxes may be assessed on and deducted from award payments, subject to U.S. government policies
+2.  Applicable taxes may be assessed on and deducted from award payments, subject to U.S. government policies.
 
 
 **EVALUATION & RANKING:**
@@ -91,7 +91,7 @@ Prizes will be awarded to the top three teams.  More details on this will be ann
 
 
 -	There are 180 public benchmark designs provided (downloadable from https://www.kaggle.com/datasets/ismailbustany/mlcad2023-fpga-macroplacement-contest/settings?resource=download/)
-- There are 60 hidden benchmark designs that will be shared after the conclusion of the contest.
+-  There are 60 hidden benchmark designs that will be shared after the conclusion of the contest.
 - For each design in the benchmark suite (public or hidden), the macro placers will be ranked based on the contest evaluation metric. The final rank for a placer will be the sum of the individual ranks on all the circuits. The macro placer with the smallest total rank wins the contest.
 - The macro placement runtime must be 10 minutes or less
 - The macro placement must be legal.  That is, macros must be placed on their respective legal sites.
