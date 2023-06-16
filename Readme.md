@@ -115,7 +115,7 @@ INFO: [Route 35-449] Initial Estimated Congestion
 ```
 - A 16 x 16  size congestion indicates congestion level 4 in the above table. It means that a 16 x 16 grid of pixels in the interconnect fabric is congested and so on and so forth for levels 1, 2, ..., 8.
 - A congestion level of 3 and below for a given direction is considered routable and will not be penalized.
-- ***Initial_routing_congestion_score = 1.2 x sum<sub>i</sub>(max(0, short_congestion_level<sub>i</sub>-3)<sup>2</sup>) + sum<sub>i(max(0, global_congestion_level<sub>i</sub>-3)<sup>2</sup>), where i=north, south, east, and south.***
+- ***Initial_routing_congestion_score = 1.2 x sum<sub>i</sub>(max(0, short_congestion_level<sub>i</sub>-3)<sup>2</sup>) + sum<sub>i</sub>(max(0, global_congestion_level<sub>i</sub>-3)<sup>2</sup>), where i=north, south, east, and south.***
 - **Detailed Routing Congestion Metric:** The final router lists the intermediate number of congested wires (nodes with overlaps) during its iterations to resolve congestion (please see example below):
 ```
 Phase 4 Rip-up And Reroute
