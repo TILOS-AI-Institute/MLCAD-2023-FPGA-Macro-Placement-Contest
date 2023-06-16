@@ -101,6 +101,7 @@ Prizes will be awarded to the top three teams.  More details on this will be ann
 - Score = Routing_congestion_score x Macroplacement_generation_runtime_score x (1 + Runtime_factor)
    - The routing congestion metrics are composed of two parts:  An initial router metric and a detailed router metric.
       - **Initial Routing Congestion Metric**: The initial router metric is presented as a table that captures short and global congestion in the north, south, east, and west directions (please see example table below):
+
 ```
 INFO: [Route 35-449] Initial Estimated Congestion
 
@@ -111,8 +112,8 @@ INFO: [Route 35-449] Initial Estimated Congestion
 |      SOUTH|     2x2|      0.01|     4x4|      1.27|     2x2|      0.02|
 |       EAST|     4x4|      0.23|   16x16|      2.46|     2x2|      0.29|
 |       WEST|     2x2|      0.43|   16x16|      3.49|     2x2|      0.58|
-
 ```
+
         - A 16 x 16  size congestion indicates congestion level 4 in the above table. It means that a 16 x 16 grid of pixels in the interconnect fabric is congested and so on and so forth for levels 1, 2, ..., 8.
         - A congestion level of 3 and below for a given direction is considered routable and will not be penalized.
         - ***Initial_routing_congestion_score = 1.2 x sum<sub>i</sub>(max(0, short_congestion_level<sub>i</sub>-3)<sup>2</sup>) + sum_i(max(0, global_congestion_level<sub>i</sub>-3)<sup>2</sup>), where i=north, south, east, and south.***
