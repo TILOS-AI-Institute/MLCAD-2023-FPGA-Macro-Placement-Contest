@@ -4,17 +4,17 @@
 - If your solution is entirely in C++, you must provide source code, as well as compilation and execution instructions.
 - If your solution uses Python, you must provide a Docker container with a script that sets up your Python environment, loads a benchmark design, and runs your macro placer to generate a macro placement solution file, "solution.pl," for us to evaluate.
 
-**2. How does a sample macro placement solution file look like?**  (posted on 02/21/2023) 
+**2. How does a sample macro placement solution file look like?**  (posted on 02/21/2023)  
 A sample macro placement solution file, sample.pl, is provided with each test case.  It is based on the ".pl" Bookshelf format.  Please inspect it to learn about the format.
 
-**3. What hardware acceleration platform can I use?**  (posted on 04/20/2023) 
+**3. What hardware acceleration platform can I use?**  (posted on 04/20/2023)   
 You can use any hardware acceleration platform for training.  However, for us to evaluate your solution, you must provide a version that works on a CPU platform.
 
-**4. What is the runtime requirement for generating the macro placement solution?**  (posted on 05/16/2023) 
+**4. What is the runtime requirement for generating the macro placement solution?**  (posted on 05/16/2023)   
 The macro placement solution generation time should not take more than 10% of the overall place_and_route flow runtime.
 
 
- **5. Changes to score evaluation metrics:**  (posted on 06/02/2023) 
+ **5. Changes to score evaluation metrics:**  (posted on 06/02/2023)   
 Many thanks to Leslie Pu (from team CUMP at CUHK) for finding several issues with the contest specifications.  Two of these issues are listed below:
  Vivado Verbose mode:   Please change the place_route.tcl file provided in each benchmark design as follows to add verbose mode:
 
