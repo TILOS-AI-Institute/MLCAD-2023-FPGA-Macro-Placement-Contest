@@ -162,9 +162,28 @@ Best
 Pu Yuan
 ```
 
-8.  **Fixed error in design.lib**  (posted on 06/15/2023)  
+8.  **Bug#1:  Fixed error in design.lib**  (posted on 06/15/2023)  
    The design.lib provided in the benchmark suite is missing a library definition.  Thanks to Hao Gu from team SEU_Placer for finding that bug.
 Please use the version of design.lib posted on https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/tree/main/Benchmark_Suite instead of the version in the benchmark suite.
 
-9.  **Design_1 has a problem**   (posted on 06/15/2023)  
+9.  **Bug#2: Design_1 has a problem**   (posted on 06/15/2023)  
     Design_1 has a specification bug.  Please remove it from the benchmark suite.
+
+10. **Bug#3: DSP macro names are incorrect in design.regions file**  (posted on06/28/2023)
+    Please run the following csh script to fix errant DSP macro names in the design.regions file:
+ 
+   % cd [path-to-your-benchmark-suite]
+   % csh clean_regions.csh
+
+   
+where clean_regions.csh is the following:
+```
+#!/bin/csh
+
+foreach f (`ls */design.regions`)
+    echo "editing $f"
+    sed -i "s#/DSP_ALU_INST##g" $f
+end
+```
+
+    
