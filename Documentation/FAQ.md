@@ -170,6 +170,7 @@ Please use the version of design.lib posted on https://github.com/TILOS-AI-Insti
     Design_1 has a specification bug.  Please remove it from the benchmark suite.
 
 10. **Bug#3: DSP macro names are incorrect in design.regions file**  (posted on06/28/2023)
+    Many Thanks to Qiin Luo from team CLUMP @CUHK for finding this bug.
     Please run the following csh script to fix errant DSP macro names in the design.regions file:
  
   ```
