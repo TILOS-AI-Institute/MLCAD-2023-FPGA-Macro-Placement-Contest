@@ -105,7 +105,27 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 ```
 
-**6. Please replace place_route.tcl with the the following version to get verbose output from Vivado:**  (posted on 06/02/2023) 
+7.   ***Question regarding cascaded URAM macros:***
+  ```
+Dear Sir or Madam,
+Hello.
+I have two questions about the cascade shape of URAM, which straddles two columns:
+
+1. The URAM columns on the provided device is discrete, for the cascaded placement of URAMs, does it mean we have to place them on adjacent columns?
+Answer:  Yes.
+
+2. The shape of URAM_CASCADE_8x2 is 8x2, does it mean that we have to place the first 8 URAMs on one column, and place the remaining 8 on another column?
+Answer: Yes.
+
+Thanks a lot!
+Best
+Pu Yuan
+```
+
+
+**Bugs in the Benchmark suite files:**
+
+ **Bug#1. Please replace place_route.tcl with the the following version to get verbose output from Vivado:**  (posted on 06/02/2023) 
 ```
 ############################## AMD Copyright (c) 2023 ##############################
 
@@ -145,31 +165,14 @@ report_route_status
 ```
 
 
-7.   ***Question regarding cascaded URAM macros:***
-  ```
-Dear Sir or Madam,
-Hello.
-I have two questions about the cascade shape of URAM, which straddles two columns:
-
-1. The URAM columns on the provided device is discrete, for the cascaded placement of URAMs, does it mean we have to place them on adjacent columns?
-Answer:  Yes.
-
-2. The shape of URAM_CASCADE_8x2 is 8x2, does it mean that we have to place the first 8 URAMs on one column, and place the remaining 8 on another column?
-Answer: Yes.
-
-Thanks a lot!
-Best
-Pu Yuan
-```
-
-8.  **Bug#1:  Fixed error in design.lib**  (posted on 06/15/2023)  
+ **Bug#2:  Fixed error in design.lib**  (posted on 06/15/2023)  
    The design.lib provided in the benchmark suite is missing a library definition.  Thanks to Hao Gu from team SEU_Placer for finding that bug.
 Please use the version of design.lib posted on https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/tree/main/Benchmark_Suite instead of the version in the benchmark suite.
 
-9.  **Bug#2: Design_1 has a problem**   (posted on 06/15/2023)  
+ **Bug#3: Design_1 has a problem**   (posted on 06/15/2023)  
     Design_1 has a specification bug.  Please remove it from the benchmark suite.
 
-10. **Bug#3: DSP macro names are incorrect in design.regions file**  (posted on06/28/2023)
+ **Bug#4: DSP macro names are incorrect in design.regions file**  (posted on06/28/2023)
     
     Many Thanks to Qin Luo from team CLUMP @CUHK for finding this bug.
     Please run the following csh script to fix errant DSP macro names in the design.regions file:
@@ -187,6 +190,10 @@ foreach f (`ls */design.regions`)
     sed -i "s#/DSP_ALU_INST##g" $f
 end
 ```
+**Bug#5:  Case sensitivity mismatch in Cascade objects names** (posted on 06/29/2023)
 
+The correspondence of shape names in design.cascade_shape and design.cascade_shape_instances has a bug. The names of the Cascade object types should have the same letter case sensitivity, but they do not.  For instance, the attached image displays the files Design_2/design.cascade_shape on the left and Design_2/design.cascade_shape_instances on the right. The highlighted shape name on the right side should be modified to match the uppercase format of the corresponding shape on the left side.
+	
 ![PastedGraphic-1](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/eefe7604-146f-4686-a6c7-6717a9a7c7fd)
 
+Thanks to Jig Mai from team MPKU@Peking University for find this bug.
