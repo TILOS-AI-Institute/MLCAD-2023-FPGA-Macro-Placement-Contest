@@ -117,7 +117,7 @@ The following is based on questions about the cascade shape of URAM from Pu Yan 
 
 ![URAM-8x2-cascade-placement](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/f4c67c0a-861d-4827-a429-8a1c8f0d8aed)
 
-3. Each URAM Tile (as sepcified in desing.scl) contains 4 URAM sites.   For example,
+3. Each URAM Tile (as specified in desing.scl) contains 4 URAM sites.   For example,
 ```   
 For example,  the cascaded 8x2 URAM instance below
 
