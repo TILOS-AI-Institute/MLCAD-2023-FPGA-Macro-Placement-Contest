@@ -215,4 +215,5 @@ foreach f (`ls */design.cascade_shape_instances`)
 end
 ```
 
+**Bug#7:  Please be aware that many of the sample.pl contain blocks with infeasible region constraints**
  
