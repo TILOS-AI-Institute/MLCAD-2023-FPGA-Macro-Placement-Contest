@@ -104,18 +104,39 @@ Router Utilization Summary
 ```
 
 7.   ***Update to question regarding cascaded URAM Cascaded macros:***  (posted on 07/03/2023)
-``` 
+ 
 I have two questions about the cascade shape of URAM, which straddles two columns (Po Yuan):
-```
+ 
 1. The URAM columns on the provided device is discrete, for the cascaded placement of URAMs, does it mean we have to place them on adjacent columns?
    
 **Answer:**  We are removing the requirement that the Cascaded URAM macros need to be placed on adjacent columns.
 
 2. The shape of URAM_CASCADE_8x2 is 8x2, does it mean that we have to place the first 8 URAMs on one column, and place the remaining 8 on another column?
 
-**Answer:** No, please note that the placement of each URAM column can be on any valid URAM column sites, as long as each 8x1 column is placed as a single discrete object.  That is, the two URAM 8x1 columns can be placed next to each others on separate URAM site column, or on the same site column.  The 8x1 columns do not need to be placed on the same y-coordinates.   Please see image below for placing two URAM_CASCAD_8x2 macros:
+**Answer:** No, please note that the placement of each URAM column can be on any valid URAM column sites, as long as each 8x1 column is placed as a single discrete object.  That is, the two URAM 8x1 columns can be placed next to each others on separate URAM site column, or on the same site column.  The 8x1 columns do not need to be placed on the same y-coordinates.   Please see an example of a valid placement for placing two URAM_CASCAD_8x2 macros (yellow and orange):
 
+![URAM-8x2-cascade-placement](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/f4c67c0a-861d-4827-a429-8a1c8f0d8aed)
 
+3. Each URAM Tile (as sepcified in desing.scl) contains 4 URAM sites.   For example,
+```   
+URAM_CASCADE_8x2_inst_b/URAM288_inst1 48 120 0
+URAM_CASCADE_8x2_inst_b/URAM288_inst2 48 120 1
+URAM_CASCADE_8x2_inst_b/URAM288_inst3 48 120 2
+URAM_CASCADE_8x2_inst_b/URAM288_inst4 48 120 3
+URAM_CASCADE_8x2_inst_b/URAM288_inst5 48 135 0
+URAM_CASCADE_8x2_inst_b/URAM288_inst6 48 135 1
+URAM_CASCADE_8x2_inst_b/URAM288_inst7 48 135 2
+URAM_CASCADE_8x2_inst_b/URAM288_inst8 48 135 3
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst10 48 90 1
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst11 48 90 2
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst12 48 90 3
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst13 48 105 0
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst14 48 105 1
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst15 48 105 2
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst16 48 105 3
+URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst9 48 90 0
+```
+Is placed on device column 48 with 4 URAMS placed on tile (48,120), 4 URAMS on tile (48, 135), 4 URAMs on tile (48,90), and 4 URAMs on tile (48,105).
 
 ___________________________________________________________________________________________________________________________
 
