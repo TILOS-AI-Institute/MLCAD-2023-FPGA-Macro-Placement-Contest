@@ -197,3 +197,22 @@ The correspondence of shape names in design.cascade_shape and design.cascade_sha
 ![PastedGraphic-1](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/eefe7604-146f-4686-a6c7-6717a9a7c7fd)
 
 Thanks to Jig Mai from team MPKU@Peking University for find this bug.
+
+Please use this script to correct the error:
+```
+#!/bin/csh
+
+foreach f (`ls */design.cascade_shape_instances`)
+
+    echo "editing $f"
+
+    sed -i "s#URAM_cascade_8x2#URAM_CASCADE_8x2#g" $f
+
+    sed -i "s#BRAM_cascade#BRAM_CASCADE#g" $f
+
+    sed -i "s#DSP_cascade#DSP_CASCADE#g" $f
+
+end
+```
+
+ 
