@@ -113,7 +113,7 @@ The following is based on questions about the cascade shape of URAM from Pu Yan 
 
 2. The shape of URAM_CASCADE_8x2 is 8x2, does it mean that we have to place the first 8 URAMs on one column, and place the remaining 8 on another column?
 
-**Answer:** No, please note that the placement of each URAM column can be on any valid URAM column sites, as long as each 8x1 column is placed as a single discrete object.  That is, the two URAM 8x1 columns can be placed next to each others on separate URAM site column, or on the same site column.  The 8x1 columns do not need to be placed on the same y-coordinates.   Please see an example of a valid placement for placing two URAM_CASCAD_8x2 macros (yellow and orange):
+**Answer:** No, please note that the placement of each URAM 8x1 subset can be on any valid URAM column sites, as long as each 8x1 subset is placed as a single discrete object.  That is, the two URAM 8x1 subsets can be placed next to each others on separate URAM site column, or on the same site column.  Also, the 8x1 subsets do not need to be placed on the same y-coordinates.   Please see an example of a valid placement for placing two URAM_CASCAD_8x2 macros (yellow and orange):
 
 ![URAM-8x2-cascade-placement](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/f4c67c0a-861d-4827-a429-8a1c8f0d8aed)
 
