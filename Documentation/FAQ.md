@@ -105,7 +105,7 @@ Router Utilization Summary
 
 7.   ***Update to question regarding cascaded URAM Cascaded macros:***  (posted on 07/03/2023)
  
-I have two questions about the cascade shape of URAM, which straddles two columns (Po Yuan):
+The following is based on questions about the cascade shape of URAM from Pu Yan and Andrew Guenter:
  
 1. The URAM columns on the provided device is discrete, for the cascaded placement of URAMs, does it mean we have to place them on adjacent columns?
    
