@@ -28,19 +28,17 @@ Score Evaluation:  The routed wirelength will not be reported by Vivado.  Instea
 3.  Minimize number of initial node overlaps (which indirectly reflects pin access issues)
 4.  Minimize the number of iterations that phase 4.1 takes to converge when the design is routable (this correlates with the detailed router's runtime)
  
-  I will amend the score evaluation metrics in the github documentation accordingly.
+The evaluation metrics on the github reporsitory has been updated accordingly.
 
-Best regards,
-Ismail
 
 Sample router solution output:
-  
+```  
 Phase 3 Initial Routing
 Phase 3.1 Global Routing
 Phase 3 Initial Routing | Checksum: 20647d656
  
 INFO: [Route 35-449] Initial Estimated Congestion
-```
+|-----------------------------------------------------------------------|
 |           | Global Congestion | Long Congestion   | Short Congestion  |
 | Direction | Size   | % Tiles  | Size   | % Tiles  | Size   | % Tiles  |
 |-----------|--------|----------|--------|----------|--------|----------|
@@ -105,27 +103,26 @@ Router Utilization Summary
   Number of Node Overlaps             = 0
 ```
 
-7.   ***Question regarding cascaded URAM macros:***
-  ```
-Dear Sir or Madam,
-Hello.
-I have two questions about the cascade shape of URAM, which straddles two columns:
-
+7.   ***Update to question regarding cascaded URAM Cascaded macros:***  (posted on 07/03/2023)
+``` 
+I have two questions about the cascade shape of URAM, which straddles two columns (Po Yuan):
+```
 1. The URAM columns on the provided device is discrete, for the cascaded placement of URAMs, does it mean we have to place them on adjacent columns?
-Answer:  Yes.
+   
+**Answer:**  We are removing the requirement that the Cascaded URAM macros need to be placed on adjacent columns.
 
 2. The shape of URAM_CASCADE_8x2 is 8x2, does it mean that we have to place the first 8 URAMs on one column, and place the remaining 8 on another column?
-Answer: Yes.
 
-Thanks a lot!
-Best
-Pu Yuan
-```
+**Answer:** No, please note that the placement of each URAM column can be on any valid URAM column sites, as long as each 8x1 column is placed as a single discrete object.  That is, the two URAM 8x1 columns can be placed next to each others on separate URAM site column, or on the same site column.  The 8x1 columns do not need to be placed on the same y-coordinates.   Please see image below for placing two URAM_CASCAD_8x2 macros:
 
 
-**Bugs in the Benchmark suite files:**
 
- **Bug#1. Please replace place_route.tcl with the the following version to get verbose output from Vivado:**  (posted on 06/02/2023) 
+___________________________________________________________________________________________________________________________
+
+**REPORTED BUGS IN THE BENCHMARK SUITE**
+___________________________________________________________________________________________________________________________
+
+**Bug#1. Please replace place_route.tcl with the the following version to get verbose output from Vivado:**  (posted on 06/02/2023) 
 ```
 ############################## AMD Copyright (c) 2023 ##############################
 
@@ -163,14 +160,16 @@ route_design -no_timing_driven -verbose
 #generate routing Report
 report_route_status
 ```
-
+___________________________________________________________________________________________________________________________
 
  **Bug#2:  Fixed error in design.lib**  (posted on 06/15/2023)  
    The design.lib provided in the benchmark suite is missing a library definition.  Thanks to Hao Gu from team SEU_Placer for finding that bug.
 Please use the version of design.lib posted on https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/tree/main/Benchmark_Suite instead of the version in the benchmark suite.
+___________________________________________________________________________________________________________________________
 
  **Bug#3: Design_1 has a problem**   (posted on 06/15/2023)  
     Design_1 has a specification bug.  Please remove it from the benchmark suite.
+___________________________________________________________________________________________________________________________
 
  **Bug#4: DSP macro names are incorrect in design.regions file**  (posted on06/28/2023)
     
@@ -190,6 +189,8 @@ foreach f (`ls */design.regions`)
     sed -i "s#/DSP_ALU_INST##g" $f
 end
 ```
+___________________________________________________________________________________________________________________________
+
 **Bug#5:  Case sensitivity mismatch in Cascade objects names** (posted on 06/29/2023)
 
 The correspondence of shape names in design.cascade_shape and design.cascade_shape_instances has a bug. The names of the Cascade object types should have the same letter case sensitivity, but they do not.  For instance, the attached image displays the files Design_2/design.cascade_shape on the left and Design_2/design.cascade_shape_instances on the right. The highlighted shape name on the right side should be modified to match the uppercase format of the corresponding shape on the left side.
@@ -199,6 +200,7 @@ The correspondence of shape names in design.cascade_shape and design.cascade_sha
 Thanks to Jig Mai from team MPKU@Peking University for find this bug.
 
 Please use this script to correct the error:
+
 ```
 #!/bin/csh
 
@@ -214,6 +216,7 @@ foreach f (`ls */design.cascade_shape_instances`)
 
 end
 ```
+___________________________________________________________________________________________________________________________
 
-**Bug#7:  Please be aware that many of the sample.pl contain blocks with infeasible region constraints**
+**Bug#6:  Please be aware that many of the sample.pl contain blocks with infeasible region constraints**
  
