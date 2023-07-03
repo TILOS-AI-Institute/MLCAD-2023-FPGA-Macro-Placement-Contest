@@ -119,6 +119,8 @@ The following is based on questions about the cascade shape of URAM from Pu Yan 
 
 3. Each URAM Tile (as sepcified in desing.scl) contains 4 URAM sites.   For example,
 ```   
+For example,  the cascaded 8x2 URAM instance below
+
 URAM_CASCADE_8x2_inst_b/URAM288_inst1 48 120 0
 URAM_CASCADE_8x2_inst_b/URAM288_inst2 48 120 1
 URAM_CASCADE_8x2_inst_b/URAM288_inst3 48 120 2
@@ -135,9 +137,8 @@ URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst14 48 105 1
 URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst15 48 105 2
 URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst16 48 105 3
 URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst9 48 90 0
-```
-Is placed on device column 48 with 4 URAMS placed on tile (48,120), 4 URAMS on tile (48, 135), 4 URAMs on tile (48,90), and 4 URAMs on tile (48,105).
-
+``` 
+ is placed  as follows: 4 URAMs in tile (48,120), 4 URAMS on tile (48, 135), 4 URAMs on tile (48,90), and 4 URAMs on tile (48,105).
 ___________________________________________________________________________________________________________________________
 
 **REPORTED BUGS IN THE BENCHMARK SUITE**
