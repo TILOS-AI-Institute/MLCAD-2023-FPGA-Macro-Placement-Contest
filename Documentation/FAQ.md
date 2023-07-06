@@ -146,16 +146,15 @@ URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst9 48 90 0
       Upon some further deliberations, we have decided to exclude the designs with 8x2 cascaded URAMs from the benchmark suite.  Treating the structure of the columnar subsets as a  soft constraint  limits their utility for timing closure, and thus is an erroneous constraint specification on our part. My apologies for this error and the confusion this has caused you.  Thus, for now, please exclude the following designs from your evaluations:
 
 ```
-1-clock:   
-184,185,189,190,194,195,199,200,204,205,209,210,214,215,219,220,224,225
+1-clock:    
+183,184,188,189,193,194,198,199,203,204,208,209,213,214,218,219,223,224
 24-clocks: 
-4,5,9,10,14,15,19,20,24,25,29,30,34,35,39,40,44,45,49,50
-
+3,4,8,9,13,14,18,19,23,24,28,29,33,34,39,38,43,44,48,49
 30-clocks: 
-64,65,69,70,74,75,79,80,84,85,89,90,94,95,99,100
-
+63,64,68,69,73,74,78,79,83,84,88,89,93,94,98,99,103,104
 38-clocks: 
-124,125,129,130,134,135,139,140,144,145,149,150,154,155,159,160
+123,124,128,129,133,134,138,139,143,144,148,149,153,154,158,159
+
 ```
  
    We will augment the benchmark suite with additional designs to compensate for this deficit in the number of designs, and publish the new designs for your research purposes (but will not consider them when evaluating your macro placers). 
