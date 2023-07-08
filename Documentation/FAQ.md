@@ -266,18 +266,26 @@ ________________________________________________________________________________
 
 **Bug#7:  Updating Benchmark suite on Kaggle**
 
-We are uploading an updated benchmark suite tonight (Kaggle https://www.kaggle.com/datasets/ismailbustany/updated-mlcad-2023-contest-benchmark.  The Kaggle uploading process is in progress.  It should be available in a couple of hours.
- Please use this updated benchmark suite in lieu of the current one
-It contains 140 designs.
-There are no 8x2 cascaded URAM macros since the placement support for them in the tool is not correct
-.It includes fixes to bugs 1-7 reported by many of you and listed on https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/blob/main/Documentation/FAQ.md.
-We provided sample macro placement solutions only for designs with no region constraints 
+-We are uploading an updated benchmark suite tonight (Kaggle https://www.kaggle.com/datasets/ismailbustany/updated-mlcad-2023-contest-benchmark.  The Kaggle uploading process is in progress.  It should be available in a couple of hours.
+
+- Please use this updated benchmark suite in lieu of the current one
+
+-It contains 140 designs.
+
+-There are no 8x2 cascaded URAM macros since the placement support for them in the tool is not correct
+
+-It includes fixes to bugs 1-7 reported by many of you and listed on https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/blob/main/Documentation/FAQ.md.
+
+-We provided sample macro placement solutions only for designs with no region constraints 
 That is, for 1-clock designs: Design_181 Design_182 Design_185 Design_186 Design_187 Design_190 Design_191 Design_192 Design_195 Design_196 Design_197 Design_200 Design_201 Design_202 Design_205 Design_206 Design_207 Design_210 Design_211 Design_212 Design_215 Design_216 Design_217 Design_220 Design_221 Design_222 Design_225 Design_226 Design_227 Design_230 Design_231 Design_232 Design_235 Design_236 Design_237 Design_240 without region constraints)
-For the remaining designs (i.e. designs with 24, 30, and 34 clocks), we do not provide sample solutions.  Instead we have added a new file, design.macros, that lists all the macro objects in that respective design (to know what macro objects it contains since the previously).
-We have updated the constraints in the file design.regions to fix a bug reported yesterday by Qin Luo from team CLUMP @CHHK (Thank you!). 
-Note: We are extending the final solution submission deadline from August 15, 2023 to August 20, 2023.
-We will send further updates on this in subsequent e-mail messages.regarding a region checker utility.
-This message will be posed on the MLCAD FAQ github website.
-   We greatly appreciate your engaging feedback, valuable questions, patience, and for finding and reporting these bugs.
+
+-For the remaining designs (i.e. designs with 24, 30, and 34 clocks), we do not provide sample solutions.  Instead we have added a new file, design.macros, that lists all the macro objects in that respective design (to know what macro objects it contains).
+
+-We have updated the constraints in the file design.regions to fix a bug reported yesterday by Qin Luo from team CLUMP @CHHK (Thank you!). 
+
+-Note: We are extending the final solution submission deadline from August 15, 2023 to August 20, 2023.
+We will send further updates on this in subsequent e-mail messages, regarding a region checker utility.
+
+- We greatly appreciate your engaging feedback, valuable questions, patience, and for finding and reporting these bugs.
 
 
