@@ -159,6 +159,27 @@ URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst9 48 90 0
  
    We will augment the benchmark suite with additional designs to compensate for this deficit in the number of designs, and publish the new designs for your research purposes (but will not consider them when evaluating your macro placers). 
 
+
+**9. Questions Nikhil @UBCPlaceM team** (posted 07/13/2023)**
+
+Question: We had a couple of questions about the number of clocks in design.
+The designs provided to us have {1,24,30,38} clocks. Our preliminary analysis showed us that all clocks are of the same frequency. For example, in Design_3, all clocks have 7ns clock period. Could you confirm if this is the case for all designs in the benchmark suite (i.e. same clock period)? It would help us save a lot of time.
+
+Answer: The clocks have the same frequency.  We have not varied the frequency requirements because the contest is non-timing driven.  The sole reason for introducing different number of clocks is to induce clock region constraints into the netlist.   W.r.t. runtime, that depends on other factors as well.  For instance, a design with 30 clocks may run faster than a design with 24 clocks if the 24-clock design has a higher Rents exponent, and so and so forth. 
+many cases the run time for designs with 24 clocks have a higher runtime compared to the corresponding designs with 30 clocks. This seems counterintuitive. Could you please clarify how the number of clocks in a design affect the placement/routing? 
+
+Question:  we’d really appreciate it if you could talk a bit more of the significance of the MLCAD2023_PublicBenchmakrSuiteDesignSpecifications.xlsx file in general.
+    
+Answer: The specification sheet shows how we constructed the designs.  We started out with a single design with a certain Rents exponent, then added various macro shapes, and dialed the Rents exponent and number of clocks. For instance, Designs 1-5 below have the same LUT, FF, RAM, DSP utilizations, number of clocks, and Rents exponent, but then we added cascaded macros to insances 2-5 of Design 1.  We followed this procedure in generating all the other designs in the benchmark suite.
+
+```
+Design Name 	LUT%	FF% 	RAMB%	DSP%	Input Rent	Number of Clocks	Vivado Runtime (s)		Notes
+1	70	38	80	80	0.65	24	3148	0.87	No tall BRM/ DSP/ URAM/ Carries
+2	70	38	80	80	0.65	24	3023	0.84	With 2 instances each of semi tall DSP and BRAM
+3	70	38	80	80	0.65	24	3044	0.85	With 2 instances each of semi tall DSP, BRAM, URAM
+4	70	38	80	80	0.65	24	3220	0.89	With 4 instances of semi tall (8x2) URAM
+5	70	38	80	80	0.65	24	3572	0.99	With 4 instances each of tall DSP and BRAM ![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/932231c5-524b-476b-956e-2744214ff702)
+```
  
 ___________________________________________________________________________________________________________________________
 
@@ -258,27 +279,6 @@ foreach f (`ls */design.cascade_shape_instances`)
     sed -i "s#DSP_cascade#DSP_CASCADE#g" $f
 
 end
-```
-
-**9. Questions Nikhil @UBCPlaceM team** (posted 07/13/2023)**
-
-Question: We had a couple of questions about the number of clocks in design.
-The designs provided to us have {1,24,30,38} clocks. Our preliminary analysis showed us that all clocks are of the same frequency. For example, in Design_3, all clocks have 7ns clock period. Could you confirm if this is the case for all designs in the benchmark suite (i.e. same clock period)? It would help us save a lot of time.
-
-Answer: The clocks have the same frequency.  We have not varied the frequency requirements because the contest is non-timing driven.  The sole reason for introducing different number of clocks is to induce clock region constraints into the netlist.   W.r.t. runtime, that depends on other factors as well.  For instance, a design with 30 clocks may run faster than a design with 24 clocks if the 24-clock design has a higher Rents exponent, and so and so forth. 
-many cases the run time for designs with 24 clocks have a higher runtime compared to the corresponding designs with 30 clocks. This seems counterintuitive. Could you please clarify how the number of clocks in a design affect the placement/routing? 
-
-Question:  we’d really appreciate it if you could talk a bit more of the significance of the MLCAD2023_PublicBenchmakrSuiteDesignSpecifications.xlsx file in general.
-    
-Answer: The specification sheet shows how we constructed the designs.  We started out with a single design with a certain Rents exponent, then added various macro shapes, and dialed the Rents exponent and number of clocks. For instance, Designs 1-5 below have the same LUT, FF, RAM, DSP utilizations, number of clocks, and Rents exponent, but then we added cascaded macros to insances 2-5 of Design 1.  We followed this procedure in generating all the other designs in the benchmark suite.
-
-```
-Design Name 	LUT%	FF% 	RAMB%	DSP%	Input Rent	Number of Clocks	Vivado Runtime (s)		Notes
-1	70	38	80	80	0.65	24	3148	0.87	No tall BRM/ DSP/ URAM/ Carries
-2	70	38	80	80	0.65	24	3023	0.84	With 2 instances each of semi tall DSP and BRAM
-3	70	38	80	80	0.65	24	3044	0.85	With 2 instances each of semi tall DSP, BRAM, URAM
-4	70	38	80	80	0.65	24	3220	0.89	With 4 instances of semi tall (8x2) URAM
-5	70	38	80	80	0.65	24	3572	0.99	With 4 instances each of tall DSP and BRAM ![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/932231c5-524b-476b-956e-2744214ff702)
 ```
 
 
