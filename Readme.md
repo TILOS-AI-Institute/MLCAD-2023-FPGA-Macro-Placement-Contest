@@ -35,6 +35,7 @@ ____________________________________________________
 |9.	|**design.regions**|  Specifies the box region constraints imposed on placeable objects.|
 |10. |**design.dcp**|  This file contains the synthesized netlist checkpoint that is required as an input by the Vivado© executable.|
 |11. |**place_route.tcl**|   A TCL script to place and route a netlist using the Vivado© flow leveraging the input macro placement solution.|
+|12. |**design.macros**| The name of plaeable macro blocks in this design.|
 
 The organizers reserve the right to modify the contents of the benchmark designs and its format.
 
