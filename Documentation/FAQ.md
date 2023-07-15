@@ -168,9 +168,9 @@ The designs provided to us have {1,24,30,38} clocks. Our preliminary analysis sh
 Answer: The clocks have the same frequency.  We have not varied the frequency requirements because the contest is non-timing driven.  The sole reason for introducing different number of clocks is to induce clock region constraints into the netlist.   W.r.t. runtime, that depends on other factors as well.  For instance, a design with 30 clocks may run faster than a design with 24 clocks if the 24-clock design has a higher Rents exponent, and so and so forth. 
 many cases the run time for designs with 24 clocks have a higher runtime compared to the corresponding designs with 30 clocks. This seems counterintuitive. Could you please clarify how the number of clocks in a design affect the placement/routing? 
 
-Question:  we’d really appreciate it if you could talk a bit more of the significance of the MLCAD2023_PublicBenchmakrSuiteDesignSpecifications.xlsx file in general.
+**Question:**  we’d really appreciate it if you could talk a bit more of the significance of the MLCAD2023_PublicBenchmakrSuiteDesignSpecifications.xlsx file in general.
     
-Answer: The specification sheet shows how we constructed the designs.  We started out with a single design with a certain Rents exponent, then added various macro shapes, and dialed the Rents exponent and number of clocks. For instance, Designs 1-5 below have the same LUT, FF, RAM, DSP utilizations, number of clocks, and Rents exponent, but then we added cascaded macros to insances 2-5 of Design 1.  We followed this procedure in generating all the other designs in the benchmark suite.
+**Answer:** The specification sheet shows how we constructed the designs.  We started out with a single design with a certain Rents exponent, then added various macro shapes, and dialed the Rents exponent and number of clocks. For instance, Designs 1-5 below have the same LUT, FF, RAM, DSP utilizations, number of clocks, and Rents exponent, but then we added cascaded macros to insances 2-5 of Design 1.  We followed this procedure in generating all the other designs in the benchmark suite.
 
 ```
 Design Name 	LUT%	FF% 	RAMB%	DSP%	Input Rent	Number of Clocks	Vivado Runtime (s)		Notes
@@ -181,12 +181,12 @@ Design Name 	LUT%	FF% 	RAMB%	DSP%	Input Rent	Number of Clocks	Vivado Runtime (s)
 5	70	38	80	80	0.65	24	3572	0.99	With 4 instances each of tall DSP and BRAM ![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/932231c5-524b-476b-956e-2744214ff702)
 ```
 
- **10. Questrion from Xinshi @CUMPLE team regardig congestion map** (posted 07/15/2023)
+**10. Questrion from Xinshi @CUMPLE team regardig congestion map** (posted 07/15/2023)
 
 **Question:** According to the definition, the congestion level is the site length of the smallest square. However, this is not the case for our contest designs. For example, the following is the interconnect congestion level obtained after routing in Design_2 (right-clicking in the Device window and selecting Metric > Interconnect Congestion Level). As highlighted with the red rectangle, this congestion area is the largest in this design and its level is 5. However, as we counted, the smallest rectangle to cover this region is about 57x71 and it is larger than the square (32x32) for level 5. Can you help investigate this? 
-```
+ 
 <img width="1541" alt="vivado-congestion-map" src="https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/6fb27470-f01f-4021-8bd3-cd37b78d063f">
-```
+ 
 
 **Answer:**  For a given level k, It is the average congestion measured in the kxk square centered at a given interconnect time.   In the congestion map image you show, the orange colored tiles have congestion level 5 (32x32 squat per the explanation above) larger than the specific 0.9 routing resource utilization threshold in the GUI. The level 6 square (ie. 64x64) has centered at these tiles has resource utilization lower than the specified 0.9 threshold. Hence, these are marked as level 5.   
 
