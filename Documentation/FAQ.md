@@ -180,7 +180,16 @@ Design Name 	LUT%	FF% 	RAMB%	DSP%	Input Rent	Number of Clocks	Vivado Runtime (s)
 4	70	38	80	80	0.65	24	3220	0.89	With 4 instances of semi tall (8x2) URAM
 5	70	38	80	80	0.65	24	3572	0.99	With 4 instances each of tall DSP and BRAM ![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/932231c5-524b-476b-956e-2744214ff702)
 ```
- 
+
+ **10. Questrion from Xinshi @CUMPLE team regardig congestion map** (posted 07/15/2023)
+
+ Question: According to the definition, the congestion level is the site length of the smallest square. However, this is not the case for our contest designs. For example, the following is the interconnect congestion level obtained after routing in Design_2 (right-clicking in the Device window and selecting Metric > Interconnect Congestion Level). As highlighted with the red rectangle, this congestion area is the largest in this design and its level is 5. However, as we counted, the smallest rectangle to cover this region is about 57x71 and it is larger than the square (32x32) for level 5. Can you help investigate this? 
+
+<img width="1541" alt="vivado-congestion-map" src="https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/6fb27470-f01f-4021-8bd3-cd37b78d063f">
+
+Answer:  For a given level k, It is the average congestion measured in the kxk square centered at a given interconnect time.   In the congestion map image you show, the orange colored tiles have congestion level 5 (32x32 squat per the explanation above) larger than the specific 0.9 routing resource utilization threshold in the GUI. The level 6 square (ie. 64x64) has centered at these tiles has resource utilization lower than the specified 0.9 threshold. Hence, these are marked as level 5.   
+
+
 ___________________________________________________________________________________________________________________________
 
 **REPORTED BUGS IN THE BENCHMARK SUITE**
