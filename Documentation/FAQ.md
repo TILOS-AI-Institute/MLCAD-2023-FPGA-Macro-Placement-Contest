@@ -141,7 +141,7 @@ URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst9 48 90 0
  is placed  as follows: 4 URAMs in tile (48,120), 4 URAMS on tile (48, 135), 4 URAMs on tile (48,90), and 4 URAMs on tile (48,105).
 
 
-8. **Important Note about 8x2 URAM cascades** (posted 07/05/2023)
+8. **Important Note about 8x2 URAM cascades** (posted on 07/05/2023)
 
       Upon some further deliberations, we have decided to exclude the designs with 8x2 cascaded URAMs from the benchmark suite.  Treating the structure of the columnar subsets as a  soft constraint  limits their utility for timing closure, and thus is an erroneous constraint specification on our part. My apologies for this error and the confusion this has caused you.  Thus, for now, please exclude the following designs from your evaluations:
 
@@ -160,7 +160,7 @@ URAM_CASCADE_8x2_inst_b/URAM_cascade_sub_instance/URAM288_inst9 48 90 0
    We will augment the benchmark suite with additional designs to compensate for this deficit in the number of designs, and publish the new designs for your research purposes (but will not consider them when evaluating your macro placers). 
 
 
-**9. Questions Nikhil @UBCPlaceM team** (posted 07/13/2023)**
+**9. Questions Nikhil @UBCPlaceM team** (posted on 07/13/2023)**
 
 Question: We had a couple of questions about the number of clocks in design.
 The designs provided to us have {1,24,30,38} clocks. Our preliminary analysis showed us that all clocks are of the same frequency. For example, in Design_3, all clocks have 7ns clock period. Could you confirm if this is the case for all designs in the benchmark suite (i.e. same clock period)? It would help us save a lot of time.
@@ -181,7 +181,7 @@ Design Name 	LUT%	FF% 	RAMB%	DSP%	Input Rent	Number of Clocks	Vivado Runtime (s)
 5	70	38	80	80	0.65	24	3572	0.99	With 4 instances each of tall DSP and BRAM ![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/932231c5-524b-476b-956e-2744214ff702)
 ```
 
-**10. Questrion from Xinshi @CUMPLE team regardig congestion map** (posted 07/15/2023)
+**10. Questrion from Xinshi @CUMPLE team regardig congestion map** (posted on 07/15/2023)
 
 **Question:** According to the definition, the congestion level is the site length of the smallest square. However, this is not the case for our contest designs. For example, the following is the interconnect congestion level obtained after routing in Design_2 (right-clicking in the Device window and selecting Metric > Interconnect Congestion Level). As highlighted with the red rectangle, this congestion area is the largest in this design and its level is 5. However, as we counted, the smallest rectangle to cover this region is about 57x71 and it is larger than the square (32x32) for level 5. Can you help investigate this? 
  
