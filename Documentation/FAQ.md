@@ -322,7 +322,9 @@ We will send further updates on this in subsequent e-mail messages, regarding a 
 
 - We greatly appreciate your engaging feedback, valuable questions, patience, and for finding and reporting these bugs.
 
-**Bug#8: Error in design.cascaded_shape_instances file:**
+________________________________________________________________________________________________________________________________________________________________________
+
+**Bug#8: Error in design.cascaded_shape_instances file:** (Posted on 08/08/2023)
 
 Please be aware of the following bug reported by Jing Mai from team MPKU at Peking University:
  
