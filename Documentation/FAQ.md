@@ -322,4 +322,25 @@ We will send further updates on this in subsequent e-mail messages, regarding a 
 
 - We greatly appreciate your engaging feedback, valuable questions, patience, and for finding and reporting these bugs.
 
+**Bug#8: Error in design.cascaded_shape_instances file:**
+
+Please be aware of the following bug reported by Jing Mai from team MPKU at Peking University:
+ 
+Upon reviewing design.cascaded_shape_instances, I noticed that the instances are not in the correct numerical order. Specifically, in the design.cascaded_shape_instances the instance numbers are listed as 1, 10, 2, 3, ..., 9. 
+
+
+![cascaded_instance0](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/66343a45-15c7-4a8c-a54a-8bbb71e981a9)
+
+Upon reviewing the file, I noticed that the instances are not in the correct numerical order. Specifically, in the design.cascaded_shape_instances the instance numbers are listed as 1, 10, 2, 3, ..., 9.  the design.nets file, the POUT pin of 
+
+	DSP_CASCADE_10_inst_z/your_instance_name1/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive
+is connected to
+	DSP_CASCADE_10_inst_z/your_instance_name2/U0/i_synth/i_synth_option.i_synth_model/opt_8series.i_uniwrap/i_primitive.
+
+![cascaded_instance1](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/b6c766eb-9eee-4582-a39e-712e59014bcb)
+
+This discrepancy  occurred due to the instances being sorted alphabetically as strings, leading to the incorrect order.
+
+
+
 
