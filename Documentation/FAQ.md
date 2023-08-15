@@ -343,6 +343,15 @@ is connected to
 
 This discrepancy  occurred due to the instances being sorted alphabetically as strings, leading to the incorrect order.
 
+**Bug#9:  Incorrect sorting order and missing data in design.cascade_shape_instances**
+Reported by Jing Mai from MPKU at Peking University:
 
+We have noticed errors in several instances, specifically in the design.cascade_shape_instances file of Design_100, where the shape named "DSP_CASCADE_60_inst_b" is missing several instances. Moreover, the numerical indices of the instances are not consecutive.Similar occurrences of this issue have been observed in other Designs as well. We believe it is essential to address these errors promptly to ensure accurate and reliable results. Could you kindly investigate this matter and take the necessary actions to rectify the errors in the design.cascade_shape_instances file? We would greatly appreciate your attention to this matter as it directly impacts the overall quality and functionality of the design.If you require any additional information or assistance from our end, please do not hesitate to reach out to us. We are committed to working collaboratively with you to resolve this issue efficiently.
+
+
+<img width="640" alt="design_cascade_instances_file_bug" src="https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/2c09065c-4ed2-4f4b-8b7c-dce4ae08f141">
+
+ **Fix:**
+ Please use the design.cascade_shape_instances files provided in the Benchmark_Suite folder in lieu of the design.cascade_shape_instances file provided with each design.   This file contains a superset of all cascade shape instances we used in this benchmark suite.
 
 
