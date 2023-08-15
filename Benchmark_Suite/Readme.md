@@ -10,6 +10,7 @@
 **design.lib**:  Corrected version of design.lib.  Please use this version for all of the designs in the benchmark suite.
 
 **design.scl**:  Corrected version of design.scl.  Please use this version for all of the designs in the benchmark suite.
- 
+
+**design.cascade_shape_instances**: Fix for bug#9: Please use the design.cascade_shape_instances files provided in the Benchmark_Suite folder in lieu of the design.cascade_shape_instances file provided with each design. This file contains a superset of all cascade shape instances we used in this benchmark suite.
  
  
