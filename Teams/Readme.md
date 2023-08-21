@@ -1,5 +1,8 @@
 
-Team ID	Team Name	University
+
+		
+		
+	Team ID	Team Name	University
 1	TAMUPlace	Texas A & M
 2	MPKU	Peking University
 3	CUMPLE	CUHK
@@ -18,8 +21,6 @@ Team ID	Team Name	University
 16	MacroWisePlacer	Simon Fraser University
 17	CUMPLE	CUHK
 18	UTDA_macro_placerUniversity of Texas at Austin	
-	NTHU_Place	
-		
-		
-		
-![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/2d816611-0593-40ca-bd51-2de7d55c17d7)
+	NTHU_Place	National Tsing Hua University
+![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/0a2c5cdd-8437-4601-a3b3-4c62b08734d1)
+	
