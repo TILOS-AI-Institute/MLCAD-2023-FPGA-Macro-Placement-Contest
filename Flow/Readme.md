@@ -8,6 +8,7 @@ g++ io_map.cxx -o io_map
 
 3. Run create_io_map.sh:  This script iterate through the directories named "Design_*" and performs the following steps:
 ```bash
+
 #!/bin/sh
 for dir in ./Design_*/;
 do
