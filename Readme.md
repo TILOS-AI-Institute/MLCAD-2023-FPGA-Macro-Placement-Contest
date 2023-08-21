@@ -11,6 +11,8 @@ ____________________________________________________
 
 **Registration deadline:**  ${\color{red}05/22/2023}$
 
+**Final Submission deadline:**  ${\color{red}08/24/2023}$
+
 **GitHub site:**  https://github.com/TILOS-AI-Institute/MLCAD23-FPGA-Macro-Placement-Contest/
 
 **E-mail:**  mlcad2023contest@gmail.com
