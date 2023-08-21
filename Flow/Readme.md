@@ -1,5 +1,5 @@
 
-Evaluation flow (courtesy of Jing Mai from team MPKU at Peking University)
+Evaluation flow (courtesy of Jing Mai from team MPKU @Peking University)
 
 1. Map fixed IO block coordinates to device coordinates:  Navigate to the directory that contains the benchmark suite.  Please copy and compile the "io_map.cxx" script using the following command:
 ```bash
