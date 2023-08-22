@@ -1,5 +1,1 @@
-
-![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/6e82b09b-d1c7-45c3-8390-3ec9cffe62b3)
-
-
-	
+![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/2aa1f481-9639-43f5-9695-100e01f972c1)
