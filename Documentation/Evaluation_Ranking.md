@@ -55,7 +55,7 @@ Phase 4.1 Global Iteration 0
 
 -	Total P&R flow runtime factor is calculated as follows:
 
--	***Runtime_factor = (Total_runtime - Median_runtime) / 10.*** There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
+-	***Runtime_factor = (Total_runtime - Median_runtime) / (10xmedian).*** There is 1% scaling factor for every 10% runtime reduction/addition against the median runtime of all place+route solutions;
 
 -	***Final_Score = Routing_congestion_score x Macroplacement_generation_runtime_score x (1 + Runtime_factor)***
 
