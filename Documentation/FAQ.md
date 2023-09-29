@@ -4,7 +4,7 @@
 - If your solution is entirely in C++, you must provide source code, as well as compilation and execution instructions.
 - If your solution uses Python, you must provide a Docker container with a script that sets up your Python environment, loads a benchmark design, and runs your macro placer to generate a macro placement solution file, "solution.pl," for us to evaluate.
 
-**2. How does a sample macro placement solution file look like?**  (posted on 02/21/2023)  
+**2. What does a sample macro placement solution file look like?**  (posted on 02/21/2023)  
 A sample macro placement solution file, sample.pl, is provided with each test case.  It is based on the ".pl" Bookshelf format.  Please inspect it to learn about the format.
 
 **3. What hardware acceleration platform can I use?**  (posted on 04/20/2023)   
@@ -25,10 +25,10 @@ With this change, Vivado will generate a routing congestion report at the end of
 Score Evaluation:  The routed wirelength will not be reported by Vivado.  Instead, various routing congestion metrics will be reported.  We will amend the routability score to be based solely on the congestion metrics and accordingly update the evaluation metrics.  You need to ensure the following:
 1.  Initial global and short congestion levels are the lowest possible (these levels vary between 1-8).
 2.  Initial short congestion level weighs more than initial global congestion level (multiplier factor is 1.2).     
-3.  Minimize number of initial node overlaps (which indirectly reflects pin access issues)
+3.  Minimize the number of initial node overlaps (which indirectly reflects pin access issues)
 4.  Minimize the number of iterations that phase 4.1 takes to converge when the design is routable (this correlates with the detailed router's runtime)
  
-The evaluation metrics on the github reporsitory has been updated accordingly.
+The evaluation metrics on the GitHub repository have been updated accordingly.
 
 
 Sample router solution output:
@@ -181,7 +181,7 @@ Design Name 	LUT%	FF% 	RAMB%	DSP%	Input Rent	Number of Clocks	Vivado Runtime (s)
 5	70	38	80	80	0.65	24	3572	0.99	With 4 instances each of tall DSP and BRAM ![image](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/932231c5-524b-476b-956e-2744214ff702)
 ```
 
-**10. Questrion from Xinshi @CUMPLE team regardig congestion map** (posted on 07/15/2023)
+**10. Question from Xinshi @CUMPLE team regarding congestion map** (posted on 07/15/2023)
 
 **Question:** According to the definition, the congestion level is the site length of the smallest square. However, this is not the case for our contest designs. For example, the following is the interconnect congestion level obtained after routing in Design_2 (right-clicking in the Device window and selecting Metric > Interconnect Congestion Level). As highlighted with the red rectangle, this congestion area is the largest in this design and its level is 5. However, as we counted, the smallest rectangle to cover this region is about 57x71 and it is larger than the square (32x32) for level 5. Can you help investigate this? 
  
@@ -271,7 +271,7 @@ The correspondence of shape names in design.cascade_shape and design.cascade_sha
 	
 ![PastedGraphic-1](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/eefe7604-146f-4686-a6c7-6717a9a7c7fd)
 
-Thanks to Jing Mai from team MPKU@Peking University for find this bug.
+Thanks to Jing Mai from team MPKU@Peking University for finding this bug.
 
 Please use this script to correct the error:
 
@@ -313,11 +313,11 @@ ________________________________________________________________________________
 - We provided sample macro placement solutions only for designs with no region constraints 
 That is, for 1-clock designs: Design_181 Design_182 Design_185 Design_186 Design_187 Design_190 Design_191 Design_192 Design_195 Design_196 Design_197 Design_200 Design_201 Design_202 Design_205 Design_206 Design_207 Design_210 Design_211 Design_212 Design_215 Design_216 Design_217 Design_220 Design_221 Design_222 Design_225 Design_226 Design_227 Design_230 Design_231 Design_232 Design_235 Design_236 Design_237 Design_240 without region constraints)
 
--For the remaining designs (i.e. designs with 24, 30, and 34 clocks), we do not provide sample solutions.  Instead we have added a new file, design.macros, that lists all the macro objects in that respective design (to know what macro objects it contains).
+-For the remaining designs (i.e. designs with 24, 30, and 34 clocks), we do not provide sample solutions.  Instead, we have added a new file, design.macros, that lists all the macro objects in that respective design (to know what macro objects it contains).
 
 - We have updated the constraints in the file design.regions to fix a bug reported yesterday by Qin Luo from team CLUMP @CHHK (Thank you!). 
 
-- Note: We are extending the final solution submission deadline from August 15, 2023 to August 20, 2023.
+- Note: We are extending the final solution submission deadline from August 15, 2023, to August 20, 2023.
 We will send further updates on this in subsequent e-mail messages, regarding a region checker utility.
 
 - We greatly appreciate your engaging feedback, valuable questions, patience, and for finding and reporting these bugs.
@@ -346,7 +346,7 @@ This discrepancy  occurred due to the instances being sorted alphabetically as s
 **Bug#9:  Incorrect sorting order and missing data in design.cascade_shape_instances**
 Reported by Jing Mai from MPKU at Peking University:
 
-We have noticed errors in several instances, specifically in the design.cascade_shape_instances file of Design_100, where the shape named "DSP_CASCADE_60_inst_b" is missing several instances. Moreover, the numerical indices of the instances are not consecutive.Similar occurrences of this issue have been observed in other Designs as well. We believe it is essential to address these errors promptly to ensure accurate and reliable results. Could you kindly investigate this matter and take the necessary actions to rectify the errors in the design.cascade_shape_instances file? We would greatly appreciate your attention to this matter as it directly impacts the overall quality and functionality of the design.If you require any additional information or assistance from our end, please do not hesitate to reach out to us. We are committed to working collaboratively with you to resolve this issue efficiently.
+We have noticed errors in several instances, specifically in the design.cascade_shape_instances file of Design_100, where the shape named "DSP_CASCADE_60_inst_b" is missing several instances. Moreover, the numerical indices of the instances are not consecutive. Similar occurrences of this issue have been observed in other Designs as well. We believe it is essential to address these errors promptly to ensure accurate and reliable results. Could you kindly investigate this matter and take the necessary actions to rectify the errors in the design.cascade_shape_instances file? We would greatly appreciate your attention to this matter as it directly impacts the overall quality and functionality of the design. If you require any additional information or assistance from our end, please do not hesitate to reach out to us. We are committed to working collaboratively with you to resolve this issue efficiently.
 
 
 <img width="640" alt="design_cascade_instances_file_bug" src="https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/assets/13140376/2c09065c-4ed2-4f4b-8b7c-dce4ae08f141">
