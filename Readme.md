@@ -152,6 +152,8 @@ Phase 4.1 Global Iteration 0
 | 4    | TAMU | 4.399    |
 | 5    | CUMP | 8.433    |
 
+For details regarding the contest evaluations please refer to the [slide deck](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/blob/main/Contest_Results/MLCAD-2023-FPGA-Macro-Placement-Contest-Results-Updated-final.pdf) and the [contest paper](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/blob/main/Contest_Results/MLCAD23_Submitted_Contest_Paper.pdf). 
+
 **CONTEST COMMITTEE:**
 
 - Ismail Bustany (Chair) 
