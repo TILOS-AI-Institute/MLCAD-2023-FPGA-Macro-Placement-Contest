@@ -142,12 +142,13 @@ Phase 4.1 Global Iteration 0
 - In the presence of multiple failures, the break-tie factors are the following: Placer failure or router failure, router runtime, number of unrouted nets, number of illegal placements
 
 **CONTEST RESULTS:**
-[1] UTDA
-[1] SEU
-[2] MPKU
-[3] CUMPLE
-[4] TAMU
-[5] CUMP
+
+- [1] UTDA
+- [1] SEU
+- [2] MPKU
+- [3] CUMPLE
+- [4] TAMU
+- [5] CUMP
 
 **CONTEST COMMITTEE:**
 
