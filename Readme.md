@@ -143,12 +143,14 @@ Phase 4.1 Global Iteration 0
 
 **CONTEST RESULTS:**
 
-- [1] UTDA
-- [1] SEU
-- [2] MPKU
-- [3] CUMPLE
-- [4] TAMU
-- [5] CUMP
+| Rank | Name       | Score |
+|------|------------|-------|
+| 1    | UTDA | 2.513    |
+| 1    | SEU | 2.516    |
+| 2    | MKPKU | 2.751    |
+| 3    | CUMPLE | 3.605    |
+| 4    | TAMU | 4.399    |
+| 5    | CUMP | 8.433    |
 
 **CONTEST COMMITTEE:**
 
