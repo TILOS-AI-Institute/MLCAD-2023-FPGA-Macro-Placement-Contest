@@ -171,5 +171,6 @@ The organizers wish to thank Zhiang Wang, Drs. Yuji Kukimoto, Sreevidya Maguluri
 **CITATION**
 
 To reference the 2023 MLCAD FPGA Macro Placement contest please cite:
+
 I. Bustany, G. Gasparyan, A. Gupta, A. B. Kahng, M. Kalase, W. Li and B. Pramanik, "The 2023 MLCAD FPGA Macro Placement Benchmark Design Suite and Contest Results", ([pdf](https://github.com/TILOS-AI-Institute/MLCAD-2023-FPGA-Macro-Placement-Contest/blob/main/Contest_Results/MLCAD23_Submitted_Contest_Paper.pdf)), Proc. ACM/IEEE Workshop on Machine Learning for CAD, 2023.
 
