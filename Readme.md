@@ -1,4 +1,4 @@
-f# MLCAD23-FPGA-Macro-Placement-Contest
+# MLCAD23-FPGA-Macro-Placement-Contest
 
 ____________________________________________________
 
